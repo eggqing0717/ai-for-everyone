@@ -1,0 +1,61 @@
+{#
+  ⚠️ 这是一个“未启用”的页面模板占位示例（page.html.example）
+  ============================================================
+  为什么不直接叫 page.html 启用它？
+  ------------------------------------------------------------
+  在当前 Honkit 6.x + nunjucks 3.2.4 + Node 22 环境下，一旦在本书
+  _layouts/website/ 下放置生效的 page.html 覆盖主题模板，会触发主题
+  自带 page.html 内部的 `{% extends "./layout.html" %}` 相对路径解析
+  错误——该相对路径会被解析到本书目录（D:\...\_layouts\website\layout.html）
+  而非主题目录，导致 “template not found: layout.html” 构建失败。
+  （若改用 `{% extends template.self %}` 则会递归栈溢出。）
+
+  因此为“确保 honkit build 必过”，本模板以 .example 形式保留、不被 Honkit 加载，
+  仅作为将来注入 SEO / Google Analytics / AdSense 的参考。
+
+  将来如何启用（需自行验证 build 通过后再提交）：
+  ------------------------------------------------------------
+  方案 A（推荐，风险最低）：不使用模板覆盖，改用支持 head 注入的
+    Honkit 插件（如 honkit-plugin-ga / theme 提供的 injections），
+    或在部署产物 _book 上做后处理注入。
+  方案 B：升级 / 更换 Honkit 版本，确认主题 page.html 的相对 extends
+    能正确解析后，将本文件改名为 page.html，并仅重写 head 区块：
+
+      {% extends "website/page.html" %}
+      {% block head %}
+          {{ super() }}
+          ...（下方 SEO / GA / AdSense 内容）
+      {% endblock %}
+
+  注意：book.json 的 plugins 不要重复列出 highlight/search/fontsettings 等
+  默认插件，重复会导致模板搜索路径重复、self 继承递归而构建失败。
+#}
+{% extends "website/page.html" %}
+
+{% block head %}
+    {{ super() }}
+
+    {# ===== SEO Meta ===== #}
+    <meta name="keywords" content="人工智能,AI科普,机器学习,深度学习,神经网络,Transformer,大模型,GPT,AI原理,通识" />
+    <meta name="author" content="{{ config.author }}" />
+    <meta property="og:title" content="{{ page.title }} · {{ config.title }}" />
+    <meta property="og:description" content="{{ page.description or config.description }}" />
+    <meta property="og:type" content="article" />
+
+    {# ===== Google Analytics（占位，未启用） =====
+      上线前：将 G-XXXXXXXXXX 替换为真实衡量 ID，并取消本段注释。
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    ===== Google Analytics 占位结束 ===== #}
+
+    {# ===== Google AdSense（占位，未启用） =====
+      上线前：将 ca-pub-XXXXXXXXXXXXXXXX 替换为真实发布商 ID，并取消本段注释。
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+            crossorigin="anonymous"></script>
+    ===== Google AdSense 占位结束 ===== #}
+{% endblock %}

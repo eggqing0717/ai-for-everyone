@@ -1,0 +1,146 @@
+/*
+ * 《人人都能懂的 AI》自定义样式
+ * 目标：优雅中文字体、舒适阅读体验、科技蓝紫品牌色。
+ * 说明：在 Honkit 默认 GitBook 主题基础上做增强，不覆盖主题结构。
+ */
+
+:root {
+  --afe-primary: #5b5bd6;        /* 品牌主色：科技蓝紫 */
+  --afe-primary-dark: #4340b8;
+  --afe-accent: #7c6ff0;
+  --afe-text: #2c3e50;
+  --afe-muted: #6b7280;
+  --afe-prompt-bg: #f5f3ff;      /* 生图提示块浅色背景 */
+  --afe-prompt-border: #a99df0;
+}
+
+/* ============ 中文字体栈 ============ */
+.book.font-family-0,
+.book .book-body .page-wrapper .page-inner section.normal {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    "微软雅黑", "Source Han Sans SC", "Noto Sans CJK SC",
+    "WenQuanYi Micro Hei", sans-serif;
+}
+
+/* ============ 正文阅读舒适度 ============ */
+.book .book-body .page-wrapper .page-inner section.normal {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--afe-text);
+  letter-spacing: 0.01em;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal p {
+  margin: 0.9em 0;
+}
+
+/* 段落首行不缩进，段间距区分层次；标题留白更足 */
+.book .book-body .page-wrapper .page-inner section.normal h1,
+.book .book-body .page-wrapper .page-inner section.normal h2,
+.book .book-body .page-wrapper .page-inner section.normal h3 {
+  font-weight: 700;
+  line-height: 1.4;
+  color: #1f2937;
+  margin-top: 1.6em;
+  margin-bottom: 0.7em;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal h1 {
+  padding-bottom: 0.3em;
+  border-bottom: 3px solid var(--afe-primary);
+}
+
+.book .book-body .page-wrapper .page-inner section.normal h2 {
+  padding-left: 0.5em;
+  border-left: 4px solid var(--afe-accent);
+}
+
+/* ============ 链接 ============ */
+.book .book-body .page-wrapper .page-inner section.normal a {
+  color: var(--afe-primary);
+  text-decoration: none;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal a:hover {
+  color: var(--afe-primary-dark);
+  text-decoration: underline;
+}
+
+/* ============ 表格美化 ============ */
+.book .book-body .page-wrapper .page-inner section.normal table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.2em 0;
+  font-size: 0.98rem;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal table th,
+.book .book-body .page-wrapper .page-inner section.normal table td {
+  border: 1px solid #e5e7eb;
+  padding: 0.6em 0.9em;
+  text-align: left;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal table th {
+  background: var(--afe-primary);
+  color: #fff;
+  font-weight: 600;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal table tr:nth-child(even) td {
+  background: #f9f9fc;
+}
+
+/* ============ 引用块 / 生图提示块 ============ */
+/*
+ * blockquote 用于承载"生图提示词"占位：
+ * 浅紫背景 + 虚线边框，提示这里将来会替换为配图。
+ */
+.book .book-body .page-wrapper .page-inner section.normal blockquote {
+  background: var(--afe-prompt-bg);
+  border: 1px dashed var(--afe-prompt-border);
+  border-left: 4px dashed var(--afe-primary);
+  border-radius: 6px;
+  padding: 0.9em 1.2em;
+  margin: 1.2em 0;
+  color: #4b4b6b;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal blockquote p {
+  margin: 0.4em 0;
+}
+
+/* ============ 行内代码与代码块 ============ */
+.book .book-body .page-wrapper .page-inner section.normal code {
+  background: #f3f0ff;
+  color: var(--afe-primary-dark);
+  border-radius: 4px;
+  padding: 0.15em 0.4em;
+  font-size: 0.92em;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal pre {
+  border-radius: 8px;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal pre code {
+  background: transparent;
+  color: inherit;
+}
+
+/* ============ 图片 ============ */
+.book .book-body .page-wrapper .page-inner section.normal img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  display: block;
+  margin: 1.2em auto;
+}
+
+/* ============ 侧边栏品牌色点缀 ============ */
+.book-summary ul.summary li.active > a {
+  color: var(--afe-primary);
+  font-weight: 600;
+}

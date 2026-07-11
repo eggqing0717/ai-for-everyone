@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "honkit build && node scripts/inject-lang-switcher.mjs && node scripts/serve-preview.mjs",
     "serve:dev": "honkit serve",
-    "build": "honkit build && node scripts/inject-lang-switcher.mjs",
+    "build": "honkit build && node scripts/inject-lang-switcher.mjs && node scripts/inject-seo.mjs",
     "clean": "honkit build --clean",
     "generate-svg": "node _illustrations/generate.mjs"
   },

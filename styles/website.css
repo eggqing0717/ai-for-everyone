@@ -1,148 +1,579 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 /*
- * 《人人都能懂的 AI》自定义样式
- * 目标：优雅中文字体、舒适阅读体验、纯黑白极简风（贴近经典 GitBook 的高级、克制、高对比观感）。
- * 说明：在 Honkit 默认 GitBook 主题基础上做增强，不覆盖主题结构。
+ * Mintlify Design System — Honkit Theme Override
+ * AI for Everyone (人人都能懂的AI)
+ * 
+ * Design tokens from Mintlify: Inter + Geist Mono, mint-green accent,
+ * flat surfaces, tight radius scale, optimized for CJK reading.
  */
 
+/* ============================================================
+   DESIGN TOKENS
+   ============================================================ */
 :root {
-  --afe-text: #24292e;           /* 正文文字：近黑 */
-  --afe-muted: #6a737d;          /* 次要灰 */
-  --afe-border: #e1e4e8;         /* 分隔 / 边框灰 */
-  --afe-subtle-bg: #f6f8fa;      /* 浅灰底 */
-  --afe-accent: #1a1a1a;         /* 强调：克制黑（当前章节 / hover 等） */
-  --afe-prompt-bg: var(--afe-subtle-bg);  /* 生图提示块背景：浅灰 */
-  --afe-prompt-border: #b0b6bd;            /* 生图提示块边框：灰 */
+  /* Brand */
+  --mint-primary: #0a0a0a;
+  --mint-on-primary: #ffffff;
+  --mint-brand-green: #00d4a4;
+  --mint-brand-green-deep: #00b48a;
+
+  /* Surfaces */
+  --mint-canvas: #ffffff;
+  --mint-canvas-dark: #0a0a0a;
+  --mint-surface: #f7f7f7;
+  --mint-surface-soft: #fafafa;
+  --mint-surface-code: #1c1c1e;
+
+  /* Borders */
+  --mint-hairline: #e5e5e5;
+  --mint-hairline-soft: #ededed;
+
+  /* Text hierarchy */
+  --mint-ink: #0a0a0a;
+  --mint-charcoal: #1c1c1e;
+  --mint-slate: #3a3a3c;
+  --mint-steel: #5a5a5c;
+  --mint-stone: #888888;
+  --mint-muted: #a8a8aa;
+
+  /* Dark surfaces */
+  --mint-on-dark: #ffffff;
+  --mint-on-dark-muted: #b3b3b3;
+
+  /* Spacing */
+  --mint-radius-sm: 6px;
+  --mint-radius-md: 8px;
+  --mint-radius-lg: 12px;
+  --mint-radius-full: 9999px;
+
+  /* Fonts */
+  --mint-font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  --mint-font-code: 'Geist Mono', 'SF Mono', Menlo, Monaco, 'Courier New', monospace;
+
+  /* Transitions */
+  --mint-transition: 0.2s ease;
 }
 
-/* ============ 中文字体栈 ============ */
-.book.font-family-0,
-.book .book-body .page-wrapper .page-inner section.normal {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
-    "微软雅黑", "Source Han Sans SC", "Noto Sans CJK SC",
-    "WenQuanYi Micro Hei", sans-serif;
+/* ============================================================
+   DARK MODE
+   ============================================================ */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --mint-canvas: #0a0a0a;
+    --mint-surface: #1a1a1a;
+    --mint-surface-soft: #141414;
+    --mint-hairline: #2a2a2a;
+    --mint-hairline-soft: #222222;
+    --mint-ink: #ffffff;
+    --mint-charcoal: #e0e0e0;
+    --mint-slate: #b0b0b0;
+    --mint-steel: #8a8a8a;
+    --mint-stone: #666666;
+    --mint-muted: #555555;
+  }
+
+  .book .book-summary {
+    background: var(--mint-surface) !important;
+    border-right-color: var(--mint-hairline) !important;
+  }
+
+  .book .book-body {
+    background: var(--mint-canvas) !important;
+  }
+
+  .book .book-body .page-wrapper .page-inner section.normal {
+    color: var(--mint-charcoal) !important;
+  }
+
+  .book .book-body .page-wrapper .page-inner section.normal h1,
+  .book .book-body .page-wrapper .page-inner section.normal h2,
+  .book .book-body .page-wrapper .page-inner section.normal h3,
+  .book .book-body .page-wrapper .page-inner section.normal h4 {
+    color: var(--mint-ink) !important;
+  }
+
+  .book .book-body .page-wrapper .page-inner section.normal code {
+    background: #2a2a2a !important;
+    color: var(--mint-charcoal) !important;
+    border-color: var(--mint-hairline) !important;
+  }
+
+  .book .book-body .page-wrapper .page-inner section.normal blockquote {
+    background: var(--mint-surface) !important;
+  }
+
+  .book .book-body .page-wrapper .page-inner section.normal table th {
+    background: var(--mint-surface) !important;
+    color: var(--mint-ink) !important;
+  }
+
+  .book .book-body .page-wrapper .page-inner section.normal table td {
+    border-color: var(--mint-hairline) !important;
+  }
+
+  .book .book-body .page-wrapper .page-inner section.normal table th {
+    border-color: var(--mint-hairline) !important;
+  }
+
+  .book .book-body .page-wrapper .page-inner section.normal img {
+    border-color: var(--mint-hairline) !important;
+  }
+
+  .book-summary ul.summary li a,
+  .book-summary ul.summary li span {
+    color: var(--mint-steel) !important;
+  }
+
+  .book-summary ul.summary li.active > a {
+    color: var(--mint-ink) !important;
+  }
+
+  /* Navigation arrows */
+  .book .book-body .navigation {
+    color: var(--mint-steel) !important;
+  }
 }
 
-/* ============ 正文阅读舒适度 ============ */
+/* ============================================================
+   BODY & PAGE STRUCTURE
+   ============================================================ */
+.book {
+  font-family: var(--mint-font-body) !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.book .book-body {
+  background: var(--mint-canvas);
+  transition: background var(--mint-transition);
+}
+
+.book .book-body .page-wrapper .page-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 24px 64px;
+}
+
+/* ============================================================
+   SIDEBAR (.book-summary)
+   ============================================================ */
+.book .book-summary {
+  background: var(--mint-surface) !important;
+  border-right: 1px solid var(--mint-hairline-soft) !important;
+  font-family: var(--mint-font-body) !important;
+  transition: background var(--mint-transition), border-color var(--mint-transition);
+}
+
+.book-summary ul.summary li a,
+.book-summary ul.summary li span {
+  font-size: 14px !important;
+  color: var(--mint-steel) !important;
+  line-height: 1.5 !important;
+  padding: 6px 16px 6px 20px !important;
+  border-left: 2px solid transparent;
+  transition: all var(--mint-transition);
+}
+
+.book-summary ul.summary li a:hover {
+  color: var(--mint-ink) !important;
+  background: var(--mint-surface-soft) !important;
+  text-decoration: none !important;
+}
+
+.book-summary ul.summary li.active > a {
+  color: var(--mint-ink) !important;
+  font-weight: 600 !important;
+  border-left: 2px solid var(--mint-brand-green) !important;
+  background: var(--mint-surface-soft) !important;
+}
+
+.book-summary ul.summary li.divider {
+  border-color: var(--mint-hairline-soft) !important;
+}
+
+/* Summary chapter headers */
+.book-summary ul.summary li.header {
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px !important;
+  color: var(--mint-stone) !important;
+  padding: 16px 16px 4px 20px !important;
+}
+
+/* ============================================================
+   TYPOGRAPHY — PROSE
+   ============================================================ */
 .book .book-body .page-wrapper .page-inner section.normal {
-  font-size: 1.05rem;
-  line-height: 1.9;
-  color: var(--afe-text);
-  letter-spacing: 0.01em;
+  font-family: var(--mint-font-body) !important;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--mint-charcoal);
+  letter-spacing: 0;
 }
 
 .book .book-body .page-wrapper .page-inner section.normal p {
-  margin: 0.9em 0;
+  margin: 1em 0;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
-/* 段落首行不缩进，段间距区分层次；标题留白更足 */
-.book .book-body .page-wrapper .page-inner section.normal h1,
-.book .book-body .page-wrapper .page-inner section.normal h2,
-.book .book-body .page-wrapper .page-inner section.normal h3 {
-  font-weight: 700;
-  line-height: 1.4;
-  color: #1a1a1a;
-  margin-top: 1.6em;
-  margin-bottom: 0.7em;
-}
-
+/* Headings */
 .book .book-body .page-wrapper .page-inner section.normal h1 {
-  padding-bottom: 0.3em;
-  border-bottom: 1px solid var(--afe-border);
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  color: var(--mint-ink);
+  margin-top: 0;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--mint-hairline);
 }
 
 .book .book-body .page-wrapper .page-inner section.normal h2 {
-  padding-left: 0.5em;
-  border-left: 3px solid #d1d5da;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--mint-ink);
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+  padding-left: 0;
+  border-left: none;
 }
 
-/* ============ 链接 ============ */
+.book .book-body .page-wrapper .page-inner section.normal h3 {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--mint-ink);
+  margin-top: 1.8em;
+  margin-bottom: 0.6em;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal h4 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--mint-ink);
+  margin-top: 1.6em;
+  margin-bottom: 0.5em;
+}
+
+/* ============================================================
+   LINKS
+   ============================================================ */
 .book .book-body .page-wrapper .page-inner section.normal a {
-  color: #1a1a1a;
+  color: var(--mint-brand-green-deep);
   text-decoration: none;
+  transition: color var(--mint-transition), text-decoration var(--mint-transition);
 }
 
 .book .book-body .page-wrapper .page-inner section.normal a:hover {
-  color: #1a1a1a;
+  color: var(--mint-brand-green);
   text-decoration: underline;
 }
 
-/* ============ 表格美化 ============ */
-.book .book-body .page-wrapper .page-inner section.normal table {
-  border-collapse: collapse;
-  width: 100%;
-  margin: 1.2em 0;
-  font-size: 0.98rem;
+/* ============================================================
+   CODE — INLINE
+   ============================================================ */
+.book .book-body .page-wrapper .page-inner section.normal code {
+  font-family: var(--mint-font-code) !important;
+  font-size: 13px;
+  background: var(--mint-surface);
+  color: var(--mint-charcoal);
+  border: 1px solid var(--mint-hairline);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-weight: 500;
 }
 
-.book .book-body .page-wrapper .page-inner section.normal table th,
-.book .book-body .page-wrapper .page-inner section.normal table td {
-  border: 1px solid var(--afe-border);
-  padding: 0.6em 0.9em;
-  text-align: left;
+/* ============================================================
+   CODE — BLOCKS (pre > code)
+   ============================================================ */
+.book .book-body .page-wrapper .page-inner section.normal pre {
+  background: var(--mint-surface-code) !important;
+  border-radius: var(--mint-radius-md);
+  padding: 16px 20px;
+  margin: 1.5em 0;
+  overflow-x: auto;
+  border: none;
 }
 
-.book .book-body .page-wrapper .page-inner section.normal table th {
-  background: var(--afe-subtle-bg);
-  color: #24292e;
-  font-weight: 600;
+.book .book-body .page-wrapper .page-inner section.normal pre code {
+  font-family: var(--mint-font-code) !important;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--mint-on-dark) !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  font-weight: 400;
 }
 
-.book .book-body .page-wrapper .page-inner section.normal table tr:nth-child(even) td {
-  background: #fafbfc;
-}
-
-/* ============ 引用块 / 生图提示块 ============ */
-/*
- * blockquote 用于承载"生图提示词"占位：
- * 浅灰背景 + 灰色虚线边框，提示这里将来会替换为配图。
- */
+/* ============================================================
+   BLOCKQUOTE
+   ============================================================ */
 .book .book-body .page-wrapper .page-inner section.normal blockquote {
-  background: var(--afe-prompt-bg);
-  border: 1px dashed var(--afe-prompt-border);
-  border-left: 4px dashed #b0b6bd;
-  border-radius: 6px;
-  padding: 0.9em 1.2em;
-  margin: 1.2em 0;
-  color: #57606a;
+  background: var(--mint-surface-soft);
+  border: none;
+  border-left: 2px solid var(--mint-brand-green);
+  border-radius: 0 var(--mint-radius-md) var(--mint-radius-md) 0;
+  padding: 16px 20px;
+  margin: 1.5em 0;
+  color: var(--mint-slate);
 }
 
 .book .book-body .page-wrapper .page-inner section.normal blockquote p {
   margin: 0.4em 0;
 }
 
-/* ============ 行内代码与代码块 ============ */
-.book .book-body .page-wrapper .page-inner section.normal code {
-  background: var(--afe-subtle-bg);
-  color: #24292e;
-  border-radius: 4px;
-  padding: 0.15em 0.4em;
-  font-size: 0.92em;
+.book .book-body .page-wrapper .page-inner section.normal blockquote p:first-child {
+  margin-top: 0;
 }
 
-.book .book-body .page-wrapper .page-inner section.normal pre {
-  border-radius: 8px;
+.book .book-body .page-wrapper .page-inner section.normal blockquote p:last-child {
+  margin-bottom: 0;
 }
 
-.book .book-body .page-wrapper .page-inner section.normal pre code {
-  background: transparent;
-  color: inherit;
+/* ============================================================
+   TABLES
+   ============================================================ */
+.book .book-body .page-wrapper .page-inner section.normal table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--mint-hairline);
+  border-radius: var(--mint-radius-md);
+  overflow: hidden;
+  margin: 1.5em 0;
+  font-size: 14px;
 }
 
-/* ============ 图片 ============ */
+.book .book-body .page-wrapper .page-inner section.normal table th,
+.book .book-body .page-wrapper .page-inner section.normal table td {
+  border-bottom: 1px solid var(--mint-hairline);
+  border-right: 1px solid var(--mint-hairline);
+  padding: 10px 14px;
+  text-align: left;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal table th:last-child,
+.book .book-body .page-wrapper .page-inner section.normal table td:last-child {
+  border-right: none;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal table tr:last-child td {
+  border-bottom: none;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal table th {
+  background: var(--mint-surface);
+  color: var(--mint-ink);
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: none;
+}
+
+/* ============================================================
+   IMAGES
+   ============================================================ */
 .book .book-body .page-wrapper .page-inner section.normal img {
   max-width: 100%;
   height: auto;
-  border-radius: 5px;
-  border: 1px solid var(--afe-border);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border-radius: var(--mint-radius-lg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06), 0 0 1px rgba(0, 0, 0, 0.1);
   display: block;
-  margin: 1.2em auto;
+  margin: 1.5em auto;
+  border: none;
 }
 
-/* ============ 侧边栏当前章节强调 ============ */
-.book-summary ul.summary li.active > a {
-  color: #1a1a1a;
-  font-weight: 600;
-  border-left: 3px solid #1a1a1a;
+/* ============================================================
+   LISTS
+   ============================================================ */
+.book .book-body .page-wrapper .page-inner section.normal ul,
+.book .book-body .page-wrapper .page-inner section.normal ol {
+  padding-left: 1.5em;
+  margin: 0.8em 0;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal li {
+  margin: 0.3em 0;
+  line-height: 1.7;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal li > p {
+  margin: 0.4em 0;
+}
+
+/* ============================================================
+   HORIZONTAL RULE
+   ============================================================ */
+.book .book-body .page-wrapper .page-inner section.normal hr {
+  border: none;
+  border-top: 1px solid var(--mint-hairline);
+  margin: 2em 0;
+}
+
+/* ============================================================
+   NAVIGATION ARROWS
+   ============================================================ */
+.book .book-body .navigation {
+  color: var(--mint-stone);
+  font-size: 32px;
+  transition: color var(--mint-transition);
+}
+
+.book .book-body .navigation:hover {
+  color: var(--mint-brand-green);
+  text-decoration: none;
+}
+
+/* ============================================================
+   SEARCH BAR
+   ============================================================ */
+.book .book-header input {
+  font-family: var(--mint-font-body) !important;
+  border-radius: var(--mint-radius-md);
+  border: 1px solid var(--mint-hairline);
+  padding: 8px 12px;
+  font-size: 14px;
+  transition: border-color var(--mint-transition);
+}
+
+.book .book-header input:focus {
+  border-color: var(--mint-brand-green);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 212, 164, 0.15);
+}
+
+/* ============================================================
+   SCROLLBAR — SUBTLE
+   ============================================================ */
+.book ::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.book ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.book ::-webkit-scrollbar-thumb {
+  background: var(--mint-hairline);
+  border-radius: var(--mint-radius-full);
+}
+
+.book ::-webkit-scrollbar-thumb:hover {
+  background: var(--mint-stone);
+}
+
+/* ============================================================
+   RESPONSIVE — MOBILE
+   ============================================================ */
+@media screen and (max-width: 768px) {
+  .book .book-body .page-wrapper .page-inner {
+    padding: 20px 16px 48px;
+  }
+
+  .book .book-body .page-wrapper .page-inner section.normal h1 {
+    font-size: 28px;
+  }
+
+  .book .book-body .page-wrapper .page-inner section.normal h2 {
+    font-size: 22px;
+  }
+
+  .book .book-body .page-wrapper .page-inner section.normal h3 {
+    font-size: 18px;
+  }
+
+  .book .book-body .page-wrapper .page-inner section.normal {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .book .book-body .page-wrapper .page-inner section.normal pre {
+    padding: 12px 14px;
+    border-radius: var(--mint-radius-sm);
+  }
+
+  .book .book-body .page-wrapper .page-inner section.normal table {
+    font-size: 13px;
+  }
+
+  .book .book-body .page-wrapper .page-inner section.normal table th,
+  .book .book-body .page-wrapper .page-inner section.normal table td {
+    padding: 8px 10px;
+  }
+}
+
+/* ============================================================
+   CJK OPTIMIZATIONS
+   ============================================================ */
+.book .book-body .page-wrapper .page-inner section.normal {
+  word-break: break-all;
+  overflow-wrap: break-word;
+  text-rendering: optimizeLegibility;
+}
+
+/* Ensure proper spacing after CJK punctuation */
+.book .book-body .page-wrapper .page-inner section.normal p,
+.book .book-body .page-wrapper .page-inner section.normal li {
+  hanging-punctuation: allow-end;
+}
+
+/* ============================================================
+   LANGUAGE SWITCHER COORDINATION
+   (injected by inject-lang-switcher.mjs — ensure visual harmony)
+   ============================================================ */
+/* Override inline styles won't work directly, but ensure no z-index conflicts */
+.book .book-header {
+  background: var(--mint-canvas) !important;
+  border-bottom: 1px solid var(--mint-hairline) !important;
+}
+
+/* ============================================================
+   GLOSSARY / FOOTER
+   ============================================================ */
+.book .book-body .page-wrapper .page-inner .glossary-term {
+  border-bottom: 1px dashed var(--mint-brand-green);
+  color: inherit;
+  cursor: help;
+}
+
+.book .book-body .page-wrapper .page-inner .glossary-term:hover {
+  border-bottom-style: solid;
+}
+
+/* ============================================================
+   PRINT STYLES
+   ============================================================ */
+@media print {
+  .book .book-summary,
+  .book .book-header,
+  .book .book-body .navigation {
+    display: none !important;
+  }
+
+  .book .book-body .page-wrapper .page-inner {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .book .book-body .page-wrapper .page-inner section.normal a {
+    color: var(--mint-ink);
+    text-decoration: underline;
+  }
+
+  .book .book-body .page-wrapper .page-inner section.normal pre {
+    border: 1px solid #ccc;
+    background: #f5f5f5 !important;
+  }
+
+  .book .book-body .page-wrapper .page-inner section.normal pre code {
+    color: #1a1a1a !important;
+  }
 }

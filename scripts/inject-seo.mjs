@@ -285,6 +285,9 @@ async function main() {
 
       let html = await readFile(filePath, 'utf-8');
 
+      // Remove HonKit default favicon to avoid conflict
+      html = html.replace(/<link[^>]*rel="shortcut icon"[^>]*favicon\.ico[^>]*>/gi, '');
+
       // Skip if already injected
       if (html.includes('<!-- SEO Meta -->')) {
         // Still inject favicon if missing
@@ -324,6 +327,8 @@ async function main() {
   const indexPath = join(BOOK_DIR, 'index.html');
   try {
     let indexHtml = await readFile(indexPath, 'utf-8');
+    // Remove HonKit default favicon
+    indexHtml = indexHtml.replace(/<link[^>]*rel="shortcut icon"[^>]*favicon\.ico[^>]*>/gi, '');
     if (!indexHtml.includes('<!-- SEO Meta -->')) {
       const snippet = buildIndexSeoSnippet();
       const headCloseIdx = indexHtml.indexOf('</head>');

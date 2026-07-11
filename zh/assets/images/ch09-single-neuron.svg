@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+<defs>
+<marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+  <polygon points="0 0, 10 3.5, 0 7" fill="#2D3748"/>
+</marker>
+<filter id="shadow" x="-4%" y="-4%" width="108%" height="108%">
+  <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.08"/>
+</filter>
+</defs>
+<rect x="0" y="0" width="800" height="450" rx="0" fill="#F8FAFE"/>
+<text x="400" y="35" font-size="22" fill="#2D3748" text-anchor="middle" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Artificial Neuron</text>
+<text x="60" y="100" font-size="14" fill="#718096" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Inputs</text>
+<circle cx="80" cy="140" r="28" fill="#EBF4FF" stroke="#2E7BF6" stroke-width="2"/>
+<text x="80" y="140" font-size="14" fill="#2E7BF6" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">x₁</text>
+<circle cx="80" cy="225" r="28" fill="#EBF4FF" stroke="#2E7BF6" stroke-width="2"/>
+<text x="80" y="225" font-size="14" fill="#2E7BF6" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">x₂</text>
+<circle cx="80" cy="310" r="28" fill="#EBF4FF" stroke="#2E7BF6" stroke-width="2"/>
+<text x="80" y="310" font-size="14" fill="#2E7BF6" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">x₃</text>
+<path d="M108,140 L280,225" fill="none" stroke="#2E7BF6" stroke-width="1.5" opacity="0.6"/>
+<text x="194" y="170.5" font-size="11" fill="#FF8A3D" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">× w₁</text>
+<path d="M108,225 L280,225" fill="none" stroke="#2E7BF6" stroke-width="1.5" opacity="0.6"/>
+<text x="194" y="213" font-size="11" fill="#FF8A3D" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">× w₂</text>
+<path d="M108,310 L280,225" fill="none" stroke="#2E7BF6" stroke-width="1.5" opacity="0.6"/>
+<text x="194" y="255.5" font-size="11" fill="#FF8A3D" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">× w₃</text>
+<circle cx="320" cy="225" r="36" fill="#E6FAF5" stroke="#22C1A6" stroke-width="2.5"/>
+<text x="320" y="225" font-size="22" fill="#22C1A6" text-anchor="middle" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Σ</text>
+<text x="320" y="277" font-size="11" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Weighted Sum</text>
+<line x1="360" y1="225" x2="470" y2="225" stroke="#2D3748" stroke-width="2" marker-end="url(#arrowhead)"/>
+<text x="420" y="211" font-size="11" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">+ bias</text>
+<rect x="480" y="190" width="120" height="70" rx="10" fill="#FFF3EB" stroke="#FF8A3D" stroke-width="1.5"/>
+<text x="540" y="215" font-size="13" fill="#FF8A3D" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Activation</text>
+<text x="540" y="235" font-size="11" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Function f(x)</text>
+<path d="M500,245 Q520,245 540,225 Q560,205 580,205" fill="none" stroke="#FF8A3D" stroke-width="1.5"/>
+<line x1="605" y1="225" x2="700" y2="225" stroke="#2D3748" stroke-width="2" marker-end="url(#arrowhead)"/>
+<circle cx="720" cy="225" r="30" fill="#EBF4FF" stroke="#2E7BF6" stroke-width="2.5"/>
+<text x="720" y="225" font-size="18" fill="#2E7BF6" text-anchor="middle" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">y</text>
+<text x="720" y="271" font-size="12" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Output</text>
+<rect x="180" y="385" width="440" height="45" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+<text x="400" y="412" font-size="15" fill="#2D3748" text-anchor="middle" font-weight="normal" font-family="'JetBrains Mono', 'Consolas', monospace" dy="0.35em">y = f( w₁x₁ + w₂x₂ + w₃x₃ + b )</text>
+</svg>

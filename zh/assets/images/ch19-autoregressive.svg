@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+<defs>
+<marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+  <polygon points="0 0, 10 3.5, 0 7" fill="#2D3748"/>
+</marker>
+<filter id="shadow" x="-4%" y="-4%" width="108%" height="108%">
+  <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.08"/>
+</filter>
+</defs>
+<rect x="0" y="0" width="800" height="450" rx="0" fill="#F8FAFE"/>
+<text x="400" y="40" font-size="22" fill="#2D3748" text-anchor="middle" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Autoregressive Generation</text>
+<text x="400" y="65" font-size="13" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Word by word, like a word chain game</text>
+<circle cx="60" cy="130" r="16" fill="#2E7BF6" opacity="0.15"/>
+<text x="60" y="130" font-size="13" fill="#2E7BF6" text-anchor="middle" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">1</text>
+<rect x="90" y="110" width="500" height="42" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+<text x="110" y="131" font-size="14" fill="#2D3748" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Today</text>
+<text x="165" y="131" font-size="14" fill="#2D3748" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">the</text>
+<text x="202" y="131" font-size="14" fill="#2D3748" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">weather</text>
+<rect x="280" y="118" width="2" height="26" rx="1" fill="#FF8A3D"/>
+<line x1="340" y1="155" x2="340" y2="175" stroke="#718096" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<circle cx="60" cy="200" r="16" fill="#2E7BF6" opacity="0.15"/>
+<text x="60" y="200" font-size="13" fill="#2E7BF6" text-anchor="middle" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">2</text>
+<rect x="90" y="180" width="500" height="42" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+<text x="110" y="201" font-size="14" fill="#2D3748" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Today</text>
+<text x="165" y="201" font-size="14" fill="#2D3748" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">the</text>
+<text x="202" y="201" font-size="14" fill="#2D3748" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">weather</text>
+<text x="275" y="201" font-size="14" fill="#FF8A3D" text-anchor="start" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">is</text>
+<rect x="308" y="188" width="2" height="26" rx="1" fill="#FF8A3D"/>
+<line x1="340" y1="225" x2="340" y2="245" stroke="#718096" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<circle cx="60" cy="270" r="16" fill="#2E7BF6" opacity="0.15"/>
+<text x="60" y="270" font-size="13" fill="#2E7BF6" text-anchor="middle" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">3</text>
+<rect x="90" y="250" width="500" height="42" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+<text x="110" y="271" font-size="14" fill="#2D3748" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Today</text>
+<text x="165" y="271" font-size="14" fill="#2D3748" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">the</text>
+<text x="202" y="271" font-size="14" fill="#2D3748" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">weather</text>
+<text x="275" y="271" font-size="14" fill="#2D3748" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">is</text>
+<text x="303" y="271" font-size="14" fill="#FF8A3D" text-anchor="start" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">really</text>
+<rect x="372" y="258" width="2" height="26" rx="1" fill="#FF8A3D"/>
+<line x1="340" y1="295" x2="340" y2="315" stroke="#718096" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<circle cx="60" cy="340" r="16" fill="#2E7BF6" opacity="0.15"/>
+<text x="60" y="340" font-size="13" fill="#2E7BF6" text-anchor="middle" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">4</text>
+<rect x="90" y="320" width="500" height="42" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+<text x="110" y="341" font-size="14" fill="#2D3748" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Today</text>
+<text x="165" y="341" font-size="14" fill="#2D3748" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">the</text>
+<text x="202" y="341" font-size="14" fill="#2D3748" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">weather</text>
+<text x="275" y="341" font-size="14" fill="#2D3748" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">is</text>
+<text x="303" y="341" font-size="14" fill="#2D3748" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">really</text>
+<text x="367" y="341" font-size="14" fill="#FF8A3D" text-anchor="start" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">nice</text>
+<path d="M620,150 C700,150 700,360 620,360" fill="none" stroke="#2E7BF6" stroke-width="2"/>
+<text x="710" y="255" font-size="12" fill="#2E7BF6" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Repeat</text>
+<line x1="620" y1="358" x2="600" y2="358" stroke="#2E7BF6" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<text x="400" y="430" font-size="12" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Each step: predict the next most likely word → append → repeat</text>
+</svg>

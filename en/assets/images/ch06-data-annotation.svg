@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+<defs>
+<marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+  <polygon points="0 0, 10 3.5, 0 7" fill="#2D3748"/>
+</marker>
+<filter id="shadow" x="-4%" y="-4%" width="108%" height="108%">
+  <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.08"/>
+</filter>
+</defs>
+<rect x="0" y="0" width="800" height="450" rx="0" fill="#F8FAFE"/>
+<circle cx="700" cy="80" r="140" fill="#EBF4FF" opacity="0.3"/>
+<circle cx="100" cy="400" r="100" fill="#E6FAF5" opacity="0.3"/>
+<text x="400" y="35" font-size="22" fill="#2D3748" text-anchor="middle" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Data Annotation Workbench</text>
+<rect x="60" y="80" width="140" height="110" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="70" y="90" width="120" height="70" rx="4" fill="#EBF4FF"/>
+<text x="130" y="125" font-size="28" fill="#2D3748" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">🐱</text>
+<rect x="80" y="168" width="60" height="20" rx="10" fill="#22C1A6" opacity="0.2"/>
+<text x="110" y="178" font-size="11" fill="#22C1A6" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Cat</text>
+<rect x="220" y="80" width="140" height="110" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="230" y="90" width="120" height="70" rx="4" fill="#FFF3EB"/>
+<text x="290" y="125" font-size="28" fill="#2D3748" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">🐕</text>
+<rect x="240" y="168" width="60" height="20" rx="10" fill="#FF8A3D" opacity="0.2"/>
+<text x="270" y="178" font-size="11" fill="#FF8A3D" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Dog</text>
+<rect x="380" y="80" width="140" height="110" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="390" y="90" width="120" height="70" rx="4" fill="#E6FAF5"/>
+<text x="450" y="125" font-size="28" fill="#2D3748" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">🐦</text>
+<rect x="400" y="168" width="60" height="20" rx="10" fill="#2E7BF6" opacity="0.2"/>
+<text x="430" y="178" font-size="11" fill="#2E7BF6" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Bird</text>
+<rect x="60" y="220" width="480" height="80" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#shadow)"/>
+<text x="80" y="245" font-size="13" fill="#718096" text-anchor="start" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Text:</text>
+<text x="120" y="245" font-size="13" fill="#2D3748" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">&quot;The cat sat on the mat&quot;</text>
+<text x="80" y="275" font-size="13" fill="#718096" text-anchor="start" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Labels:</text>
+<rect x="135" y="263" width="60" height="22" rx="11" fill="#2E7BF6" opacity="0.15"/>
+<text x="165" y="274" font-size="11" fill="#2E7BF6" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Entity</text>
+<rect x="205" y="263" width="75" height="22" rx="11" fill="#22C1A6" opacity="0.15"/>
+<text x="242" y="274" font-size="11" fill="#22C1A6" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Positive</text>
+<rect x="290" y="263" width="70" height="22" rx="11" fill="#FF8A3D" opacity="0.15"/>
+<text x="325" y="274" font-size="11" fill="#FF8A3D" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Animal</text>
+<rect x="580" y="100" width="180" height="280" rx="12" fill="#EBF4FF" opacity="0.2"/>
+<circle cx="670" cy="150" r="25" fill="#FFF3EB" stroke="#FF8A3D" stroke-width="1.5"/>
+<circle cx="663" cy="145" r="3" fill="#2D3748"/>
+<circle cx="677" cy="145" r="3" fill="#2D3748"/>
+<path d="M662,157 Q670,163 678,157" fill="none" stroke="#FF8A3D" stroke-width="1.5"/>
+<rect x="650" y="180" width="40" height="50" rx="8" fill="#EBF4FF" stroke="#2E7BF6" stroke-width="1.5"/>
+<rect x="620" y="250" width="100" height="110" rx="6" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+<text x="670" y="270" font-size="11" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Checklist</text>
+<line x1="635" y1="285" x2="705" y2="285" stroke="#E2E8F0" stroke-width="1.5"/>
+<text x="648" y="302" font-size="12" fill="#22C1A6" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">✓ Cat</text>
+<text x="648" y="322" font-size="12" fill="#22C1A6" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">✓ Dog</text>
+<text x="648" y="342" font-size="12" fill="#718096" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">○ Bird</text>
+<text x="400" y="390" font-size="13" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Raw Data → Annotation → Labeled Dataset → Model Training</text>
+<line x1="180" y1="410" x2="300" y2="410" stroke="#2E7BF6" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<line x1="330" y1="410" x2="450" y2="410" stroke="#22C1A6" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<line x1="480" y1="410" x2="600" y2="410" stroke="#FF8A3D" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<g>
+<rect x="100" y="420" width="72" height="26" rx="13" fill="#2E7BF6" opacity="0.15"/>
+<text x="136" y="433" font-size="12" fill="#2E7BF6" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Images</text>
+</g>
+<g>
+<rect x="310" y="420" width="72" height="26" rx="13" fill="#22C1A6" opacity="0.15"/>
+<text x="346" y="433" font-size="12" fill="#22C1A6" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Labels</text>
+</g>
+<g>
+<rect x="510" y="420" width="88" height="26" rx="13" fill="#FF8A3D" opacity="0.15"/>
+<text x="554" y="433" font-size="12" fill="#FF8A3D" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Training</text>
+</g>
+</svg>

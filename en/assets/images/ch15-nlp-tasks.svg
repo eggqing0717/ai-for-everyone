@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+<defs>
+<marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+  <polygon points="0 0, 10 3.5, 0 7" fill="#2D3748"/>
+</marker>
+<filter id="shadow" x="-4%" y="-4%" width="108%" height="108%">
+  <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.08"/>
+</filter>
+</defs>
+<rect x="0" y="0" width="800" height="450" rx="0" fill="#F8FAFE"/>
+<text x="400" y="35" font-size="22" fill="#2D3748" text-anchor="middle" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">NLP Tasks Overview</text>
+<rect x="60" y="70" width="310" height="160" rx="12" fill="#FFFFFF" stroke="#2E7BF6" stroke-width="2"/>
+<rect x="60" y="70" width="310" height="40" rx="12" fill="#2E7BF6" opacity="0.12"/>
+<rect x="60" y="100" width="310" height="10" rx="0" fill="#2E7BF6" opacity="0.12"/>
+<text x="110" y="94" font-size="15" fill="#2E7BF6" text-anchor="start" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Classification</text>
+<text x="215" y="150" font-size="32" fill="#2D3748" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">📋</text>
+<text x="215" y="200" font-size="13" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Spam? / Sentiment?</text>
+<rect x="420" y="70" width="310" height="160" rx="12" fill="#FFFFFF" stroke="#22C1A6" stroke-width="2"/>
+<rect x="420" y="70" width="310" height="40" rx="12" fill="#22C1A6" opacity="0.12"/>
+<rect x="420" y="100" width="310" height="10" rx="0" fill="#22C1A6" opacity="0.12"/>
+<text x="470" y="94" font-size="15" fill="#22C1A6" text-anchor="start" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Translation</text>
+<text x="575" y="150" font-size="32" fill="#2D3748" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">🌍</text>
+<text x="575" y="200" font-size="13" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">EN → FR / ZH → EN</text>
+<rect x="60" y="260" width="310" height="160" rx="12" fill="#FFFFFF" stroke="#FF8A3D" stroke-width="2"/>
+<rect x="60" y="260" width="310" height="40" rx="12" fill="#FF8A3D" opacity="0.12"/>
+<rect x="60" y="290" width="310" height="10" rx="0" fill="#FF8A3D" opacity="0.12"/>
+<text x="110" y="284" font-size="15" fill="#FF8A3D" text-anchor="start" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Question Answering</text>
+<text x="215" y="340" font-size="32" fill="#2D3748" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">❓</text>
+<text x="215" y="390" font-size="13" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Context → Answer</text>
+<rect x="420" y="260" width="310" height="160" rx="12" fill="#FFFFFF" stroke="#9F7AEA" stroke-width="2"/>
+<rect x="420" y="260" width="310" height="40" rx="12" fill="#9F7AEA" opacity="0.12"/>
+<rect x="420" y="290" width="310" height="10" rx="0" fill="#9F7AEA" opacity="0.12"/>
+<text x="470" y="284" font-size="15" fill="#9F7AEA" text-anchor="start" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Generation</text>
+<text x="575" y="340" font-size="32" fill="#2D3748" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">✍️</text>
+<text x="575" y="390" font-size="13" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Write / Summarize</text>
+<circle cx="400" cy="245" r="24" fill="#EBF4FF" stroke="#2E7BF6" stroke-width="2"/>
+<text x="400" y="245" font-size="11" fill="#2E7BF6" text-anchor="middle" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">NLP</text>
+</svg>

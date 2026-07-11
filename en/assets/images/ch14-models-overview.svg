@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+<defs>
+<marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+  <polygon points="0 0, 10 3.5, 0 7" fill="#2D3748"/>
+</marker>
+<filter id="shadow" x="-4%" y="-4%" width="108%" height="108%">
+  <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.08"/>
+</filter>
+</defs>
+<rect x="0" y="0" width="800" height="450" rx="0" fill="#F8FAFE"/>
+<text x="400" y="35" font-size="22" fill="#2D3748" text-anchor="middle" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Classic Model Zoo</text>
+<text x="400" y="56" font-size="12" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Key milestones in deep learning history</text>
+<line x1="60" y1="380" x2="740" y2="380" stroke="#E2E8F0" stroke-width="3"/>
+<rect x="80" y="85" width="120" height="170" rx="10" fill="#FFFFFF" stroke="#22C1A6" stroke-width="2"/>
+<rect x="80" y="85" width="120" height="36" rx="10" fill="#22C1A6" opacity="0.15"/>
+<rect x="80" y="111" width="120" height="10" rx="0" fill="#22C1A6" opacity="0.15"/>
+<text x="140" y="105" font-size="14" fill="#22C1A6" text-anchor="middle" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">AlexNet</text>
+<text x="140" y="140" font-size="20" fill="#2D3748" text-anchor="middle" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">2012</text>
+<text x="140" y="170" font-size="11" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">8 layers</text>
+<text x="140" y="188" font-size="11" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">GPU training</text>
+<rect x="100" y="210" width="25" height="30" rx="4" fill="#22C1A6" opacity="0.2"/>
+<line x1="140" y1="255" x2="140" y2="375" stroke="#22C1A6" stroke-width="1.5" stroke-dasharray="4,3"/>
+<circle cx="140" cy="380" r="7" fill="#22C1A6"/>
+<text x="140" y="400" font-size="10" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">2012</text>
+<rect x="220" y="110" width="120" height="170" rx="10" fill="#FFFFFF" stroke="#2E7BF6" stroke-width="2"/>
+<rect x="220" y="110" width="120" height="36" rx="10" fill="#2E7BF6" opacity="0.15"/>
+<rect x="220" y="136" width="120" height="10" rx="0" fill="#2E7BF6" opacity="0.15"/>
+<text x="280" y="130" font-size="14" fill="#2E7BF6" text-anchor="middle" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">VGG</text>
+<text x="280" y="165" font-size="20" fill="#2D3748" text-anchor="middle" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">2014</text>
+<text x="280" y="195" font-size="11" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">19 layers</text>
+<text x="280" y="213" font-size="11" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">simple &amp; deep</text>
+<rect x="240" y="217" width="25" height="48" rx="4" fill="#2E7BF6" opacity="0.2"/>
+<line x1="280" y1="280" x2="280" y2="375" stroke="#2E7BF6" stroke-width="1.5" stroke-dasharray="4,3"/>
+<circle cx="280" cy="380" r="7" fill="#2E7BF6"/>
+<text x="280" y="400" font-size="10" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">2014</text>
+<rect x="360" y="85" width="120" height="170" rx="10" fill="#FFFFFF" stroke="#9F7AEA" stroke-width="2"/>
+<rect x="360" y="85" width="120" height="36" rx="10" fill="#9F7AEA" opacity="0.15"/>
+<rect x="360" y="111" width="120" height="10" rx="0" fill="#9F7AEA" opacity="0.15"/>
+<text x="420" y="105" font-size="14" fill="#9F7AEA" text-anchor="middle" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">ResNet</text>
+<text x="420" y="140" font-size="20" fill="#2D3748" text-anchor="middle" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">2015</text>
+<text x="420" y="170" font-size="11" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">152 layers</text>
+<text x="420" y="188" font-size="11" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">skip connections</text>
+<rect x="380" y="174" width="25" height="66" rx="4" fill="#9F7AEA" opacity="0.2"/>
+<line x1="420" y1="255" x2="420" y2="375" stroke="#9F7AEA" stroke-width="1.5" stroke-dasharray="4,3"/>
+<circle cx="420" cy="380" r="7" fill="#9F7AEA"/>
+<text x="420" y="400" font-size="10" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">2015</text>
+<rect x="510" y="110" width="120" height="170" rx="10" fill="#FFFFFF" stroke="#FF8A3D" stroke-width="2"/>
+<rect x="510" y="110" width="120" height="36" rx="10" fill="#FF8A3D" opacity="0.15"/>
+<rect x="510" y="136" width="120" height="10" rx="0" fill="#FF8A3D" opacity="0.15"/>
+<text x="570" y="130" font-size="14" fill="#FF8A3D" text-anchor="middle" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">BERT</text>
+<text x="570" y="165" font-size="20" fill="#2D3748" text-anchor="middle" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">2018</text>
+<text x="570" y="195" font-size="11" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Bidirectional</text>
+<text x="570" y="213" font-size="11" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">NLU</text>
+<rect x="530" y="181" width="25" height="84" rx="4" fill="#FF8A3D" opacity="0.2"/>
+<line x1="570" y1="280" x2="570" y2="375" stroke="#FF8A3D" stroke-width="1.5" stroke-dasharray="4,3"/>
+<circle cx="570" cy="380" r="7" fill="#FF8A3D"/>
+<text x="570" y="400" font-size="10" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">2018</text>
+<rect x="660" y="85" width="120" height="170" rx="10" fill="#FFFFFF" stroke="#E53E3E" stroke-width="2"/>
+<rect x="660" y="85" width="120" height="36" rx="10" fill="#E53E3E" opacity="0.15"/>
+<rect x="660" y="111" width="120" height="10" rx="0" fill="#E53E3E" opacity="0.15"/>
+<text x="720" y="105" font-size="14" fill="#E53E3E" text-anchor="middle" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">GPT-4</text>
+<text x="720" y="140" font-size="20" fill="#2D3748" text-anchor="middle" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">2023</text>
+<text x="720" y="170" font-size="11" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Multimodal</text>
+<text x="720" y="188" font-size="11" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">emergent</text>
+<rect x="680" y="138" width="25" height="102" rx="4" fill="#E53E3E" opacity="0.2"/>
+<line x1="720" y1="255" x2="720" y2="375" stroke="#E53E3E" stroke-width="1.5" stroke-dasharray="4,3"/>
+<circle cx="720" cy="380" r="7" fill="#E53E3E"/>
+<text x="720" y="400" font-size="10" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">2023</text>
+<line x1="60" y1="430" x2="740" y2="430" stroke="#718096" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<text x="400" y="445" font-size="11" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Increasing scale and capability →</text>
+</svg>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+<defs>
+<marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+  <polygon points="0 0, 10 3.5, 0 7" fill="#2D3748"/>
+</marker>
+<filter id="shadow" x="-4%" y="-4%" width="108%" height="108%">
+  <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.08"/>
+</filter>
+</defs>
+<rect x="0" y="0" width="800" height="450" rx="0" fill="#F8FAFE"/>
+<text x="400" y="35" font-size="20" fill="#2D3748" text-anchor="middle" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Model Fitting: Underfitting / Good Fit / Overfitting</text>
+<line x1="50" y1="380" x2="750" y2="380" stroke="#2D3748" stroke-width="1.5"/>
+<line x1="50" y1="380" x2="50" y2="60" stroke="#2D3748" stroke-width="1.5"/>
+<text x="400" y="430" font-size="12" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Input Feature (x)</text>
+<text x="25" y="220" font-size="12" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">y</text>
+<circle cx="80" cy="320" r="4" fill="#2D3748" opacity="0.3"/>
+<circle cx="120" cy="280" r="4" fill="#2D3748" opacity="0.3"/>
+<circle cx="160" cy="250" r="4" fill="#2D3748" opacity="0.3"/>
+<circle cx="200" cy="230" r="4" fill="#2D3748" opacity="0.3"/>
+<circle cx="240" cy="200" r="4" fill="#2D3748" opacity="0.3"/>
+<circle cx="280" cy="180" r="4" fill="#2D3748" opacity="0.3"/>
+<circle cx="320" cy="170" r="4" fill="#2D3748" opacity="0.3"/>
+<circle cx="360" cy="175" r="4" fill="#2D3748" opacity="0.3"/>
+<circle cx="400" cy="190" r="4" fill="#2D3748" opacity="0.3"/>
+<circle cx="440" cy="220" r="4" fill="#2D3748" opacity="0.3"/>
+<circle cx="480" cy="260" r="4" fill="#2D3748" opacity="0.3"/>
+<circle cx="520" cy="300" r="4" fill="#2D3748" opacity="0.3"/>
+<circle cx="560" cy="330" r="4" fill="#2D3748" opacity="0.3"/>
+<circle cx="600" cy="340" r="4" fill="#2D3748" opacity="0.3"/>
+<circle cx="640" cy="320" r="4" fill="#2D3748" opacity="0.3"/>
+<circle cx="680" cy="290" r="4" fill="#2D3748" opacity="0.3"/>
+<circle cx="100" cy="300" r="4" fill="#2D3748" opacity="0.3"/>
+<circle cx="150" cy="270" r="4" fill="#2D3748" opacity="0.3"/>
+<circle cx="200" cy="250" r="4" fill="#2D3748" opacity="0.3"/>
+<circle cx="300" cy="160" r="4" fill="#2D3748" opacity="0.3"/>
+<circle cx="350" cy="185" r="4" fill="#2D3748" opacity="0.3"/>
+<circle cx="450" cy="240" r="4" fill="#2D3748" opacity="0.3"/>
+<circle cx="500" cy="280" r="4" fill="#2D3748" opacity="0.3"/>
+<circle cx="550" cy="310" r="4" fill="#2D3748" opacity="0.3"/>
+<circle cx="620" cy="335" r="4" fill="#2D3748" opacity="0.3"/>
+<circle cx="680" cy="310" r="4" fill="#2D3748" opacity="0.3"/>
+<path d="M80,310 L700,270" fill="none" stroke="#FF8A3D" stroke-width="3" opacity="0.8"/>
+<path d="M80,320 Q200,200 320,170 Q480,180 560,310 Q620,340 700,300" fill="none" stroke="#22C1A6" stroke-width="3" opacity="0.9"/>
+<path d="M80,320 L120,280 L160,250 L200,230 L240,200 L280,180 L320,170 L360,175 L400,190 L440,220 L480,260 L520,300 L560,330 L600,340 L640,320 L680,290" fill="none" stroke="#2E7BF6" stroke-width="2.5" opacity="0.8"/>
+<rect x="540" y="55" width="220" height="100" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#shadow)"/>
+<line x1="560" y1="80" x2="595" y2="80" stroke="#FF8A3D" stroke-width="3"/>
+<text x="605" y="80" font-size="11" fill="#2D3748" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Underfitting (too simple)</text>
+<line x1="560" y1="105" x2="595" y2="105" stroke="#22C1A6" stroke-width="3"/>
+<text x="605" y="105" font-size="11" fill="#2D3748" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Good Fit (just right)</text>
+<line x1="560" y1="130" x2="595" y2="130" stroke="#2E7BF6" stroke-width="3"/>
+<text x="605" y="130" font-size="11" fill="#2D3748" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Overfitting (too complex)</text>
+</svg>

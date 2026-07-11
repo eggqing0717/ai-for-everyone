@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+<defs>
+<marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+  <polygon points="0 0, 10 3.5, 0 7" fill="#2D3748"/>
+</marker>
+<filter id="shadow" x="-4%" y="-4%" width="108%" height="108%">
+  <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.08"/>
+</filter>
+</defs>
+<rect x="0" y="0" width="800" height="450" rx="0" fill="#F8FAFE"/>
+<text x="400" y="38" font-size="22" fill="#2D3748" text-anchor="middle" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Supervised vs. Unsupervised Learning</text>
+<line x1="400" y1="65" x2="400" y2="410" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="6,4"/>
+<text x="200" y="80" font-size="16" fill="#2E7BF6" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Supervised Learning</text>
+<text x="200" y="100" font-size="11" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Learning with answers</text>
+<rect x="80" y="130" width="240" height="160" rx="12" fill="#EBF4FF" opacity="0.3"/>
+<circle cx="130" cy="170" r="18" fill="#2E7BF6" opacity="0.2"/>
+<text x="130" y="170" font-size="14" fill="#2D3748" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">🐱</text>
+<text x="160" y="170" font-size="12" fill="#2D3748" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">= Cat</text>
+<circle cx="130" cy="215" r="18" fill="#2E7BF6" opacity="0.2"/>
+<text x="130" y="215" font-size="14" fill="#2D3748" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">🐶</text>
+<text x="160" y="215" font-size="12" fill="#2D3748" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">= Dog</text>
+<circle cx="130" cy="260" r="18" fill="#2E7BF6" opacity="0.2"/>
+<text x="130" y="260" font-size="14" fill="#2D3748" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">🐦</text>
+<text x="160" y="260" font-size="12" fill="#2D3748" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">= Bird</text>
+<g>
+<rect x="230" y="145" width="72" height="26" rx="13" fill="#2E7BF6" opacity="0.15"/>
+<text x="266" y="158" font-size="12" fill="#2E7BF6" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Labels</text>
+</g>
+<line x1="200" y1="300" x2="200" y2="330" stroke="#718096" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<rect x="120" y="340" width="160" height="50" rx="10" fill="#EBF4FF" stroke="#2E7BF6" stroke-width="1.5"/>
+<text x="200" y="360" font-size="12" fill="#2D3748" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Learns to classify</text>
+<text x="200" y="378" font-size="12" fill="#2D3748" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">new examples</text>
+<text x="600" y="80" font-size="16" fill="#22C1A6" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Unsupervised Learning</text>
+<text x="600" y="100" font-size="11" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Finding hidden patterns</text>
+<rect x="480" y="130" width="240" height="160" rx="12" fill="#E6FAF5" opacity="0.3"/>
+<circle cx="530" cy="170" r="8" fill="#FF8A3D" opacity="0.6"/>
+<circle cx="560" cy="200" r="8" fill="#FF8A3D" opacity="0.6"/>
+<circle cx="545" cy="240" r="8" fill="#FF8A3D" opacity="0.6"/>
+<circle cx="630" cy="160" r="8" fill="#2E7BF6" opacity="0.6"/>
+<circle cx="660" cy="190" r="8" fill="#2E7BF6" opacity="0.6"/>
+<circle cx="645" cy="230" r="8" fill="#2E7BF6" opacity="0.6"/>
+<circle cx="590" cy="260" r="8" fill="#22C1A6" opacity="0.6"/>
+<circle cx="610" cy="220" r="8" fill="#22C1A6" opacity="0.6"/>
+<circle cx="545" cy="200" r="45" fill="none" stroke="#FF8A3D" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6"/>
+<circle cx="645" cy="190" r="45" fill="none" stroke="#2E7BF6" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6"/>
+<g>
+<rect x="610" y="145" width="96" height="26" rx="13" fill="#22C1A6" opacity="0.15"/>
+<text x="658" y="158" font-size="12" fill="#22C1A6" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">No Labels</text>
+</g>
+<line x1="600" y1="300" x2="600" y2="330" stroke="#718096" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<rect x="520" y="340" width="160" height="50" rx="10" fill="#E6FAF5" stroke="#22C1A6" stroke-width="1.5"/>
+<text x="600" y="360" font-size="12" fill="#2D3748" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Discovers groups</text>
+<text x="600" y="378" font-size="12" fill="#2D3748" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">and structure</text>
+<circle cx="400" cy="230" r="20" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+<text x="400" y="230" font-size="11" fill="#718096" text-anchor="middle" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">VS</text>
+<text x="200" y="420" font-size="11" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Teacher provides answers</text>
+<text x="600" y="420" font-size="11" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">No teacher, self-discovery</text>
+</svg>

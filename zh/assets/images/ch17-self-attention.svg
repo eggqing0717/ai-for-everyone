@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+<defs>
+<marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+  <polygon points="0 0, 10 3.5, 0 7" fill="#2D3748"/>
+</marker>
+<filter id="shadow" x="-4%" y="-4%" width="108%" height="108%">
+  <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.08"/>
+</filter>
+</defs>
+<rect x="0" y="0" width="800" height="450" rx="0" fill="#F8FAFE"/>
+<text x="400" y="30" font-size="22" fill="#2D3748" text-anchor="middle" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Self-Attention: Q / K / V Mechanism</text>
+<rect x="185" y="90" width="70" height="35" rx="6" fill="#EBF4FF" stroke="#2E7BF6" stroke-width="1.5"/>
+<text x="220" y="107.5" font-size="13" fill="#2D3748" text-anchor="middle" font-weight="500" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">The</text>
+<rect x="275" y="90" width="70" height="35" rx="6" fill="#EBF4FF" stroke="#2E7BF6" stroke-width="1.5"/>
+<text x="310" y="107.5" font-size="13" fill="#2D3748" text-anchor="middle" font-weight="500" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">cat</text>
+<rect x="365" y="90" width="70" height="35" rx="6" fill="#EBF4FF" stroke="#2E7BF6" stroke-width="1.5"/>
+<text x="400" y="107.5" font-size="13" fill="#2D3748" text-anchor="middle" font-weight="500" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">sat</text>
+<rect x="455" y="90" width="70" height="35" rx="6" fill="#EBF4FF" stroke="#2E7BF6" stroke-width="1.5"/>
+<text x="490" y="107.5" font-size="13" fill="#2D3748" text-anchor="middle" font-weight="500" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">on</text>
+<rect x="545" y="90" width="70" height="35" rx="6" fill="#EBF4FF" stroke="#2E7BF6" stroke-width="1.5"/>
+<text x="580" y="107.5" font-size="13" fill="#2D3748" text-anchor="middle" font-weight="500" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">mat</text>
+<text x="130" y="107.5" font-size="12" fill="#718096" text-anchor="end" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Input:</text>
+<rect x="200" y="170" width="350" height="55" rx="6" fill="#2E7BF6" opacity="0.1"/>
+<rect x="200" y="170" width="350" height="55" rx="6" fill="none" stroke="#2E7BF6" stroke-width="1.5"/>
+<text x="185" y="197.5" font-size="12" fill="#2E7BF6" text-anchor="end" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Q (Query)</text>
+<line x1="270" y1="175" x2="270" y2="220" stroke="#2E7BF6" stroke-width="0.5"/>
+<line x1="340" y1="175" x2="340" y2="220" stroke="#2E7BF6" stroke-width="0.5"/>
+<line x1="410" y1="175" x2="410" y2="220" stroke="#2E7BF6" stroke-width="0.5"/>
+<line x1="480" y1="175" x2="480" y2="220" stroke="#2E7BF6" stroke-width="0.5"/>
+<rect x="200" y="240" width="350" height="55" rx="6" fill="#22C1A6" opacity="0.1"/>
+<rect x="200" y="240" width="350" height="55" rx="6" fill="none" stroke="#22C1A6" stroke-width="1.5"/>
+<text x="185" y="267.5" font-size="12" fill="#22C1A6" text-anchor="end" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">K (Key)</text>
+<line x1="270" y1="245" x2="270" y2="290" stroke="#22C1A6" stroke-width="0.5"/>
+<line x1="340" y1="245" x2="340" y2="290" stroke="#22C1A6" stroke-width="0.5"/>
+<line x1="410" y1="245" x2="410" y2="290" stroke="#22C1A6" stroke-width="0.5"/>
+<line x1="480" y1="245" x2="480" y2="290" stroke="#22C1A6" stroke-width="0.5"/>
+<rect x="200" y="310" width="350" height="55" rx="6" fill="#FF8A3D" opacity="0.1"/>
+<rect x="200" y="310" width="350" height="55" rx="6" fill="none" stroke="#FF8A3D" stroke-width="1.5"/>
+<text x="185" y="337.5" font-size="12" fill="#FF8A3D" text-anchor="end" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">V (Value)</text>
+<line x1="270" y1="315" x2="270" y2="360" stroke="#FF8A3D" stroke-width="0.5"/>
+<line x1="340" y1="315" x2="340" y2="360" stroke="#FF8A3D" stroke-width="0.5"/>
+<line x1="410" y1="315" x2="410" y2="360" stroke="#FF8A3D" stroke-width="0.5"/>
+<line x1="480" y1="315" x2="480" y2="360" stroke="#FF8A3D" stroke-width="0.5"/>
+<line x1="220" y1="125" x2="220" y2="165" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="3,2"/>
+<line x1="310" y1="125" x2="310" y2="165" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="3,2"/>
+<line x1="400" y1="125" x2="400" y2="165" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="3,2"/>
+<line x1="490" y1="125" x2="490" y2="165" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="3,2"/>
+<line x1="580" y1="125" x2="580" y2="165" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="3,2"/>
+<rect x="610" y="175" width="160" height="60" rx="8" fill="#EBF4FF" stroke="#2E7BF6" stroke-width="1.5"/>
+<text x="690" y="195" font-size="12" fill="#2E7BF6" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Score = Q × Kᵀ</text>
+<text x="690" y="217" font-size="11" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">÷ √d</text>
+<rect x="610" y="255" width="160" height="40" rx="8" fill="#E6FAF5" stroke="#22C1A6" stroke-width="1.5"/>
+<text x="690" y="275" font-size="12" fill="#22C1A6" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Softmax</text>
+<rect x="610" y="315" width="160" height="40" rx="8" fill="#FFF3EB" stroke="#FF8A3D" stroke-width="1.5"/>
+<text x="690" y="335" font-size="12" fill="#FF8A3D" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Attention × V</text>
+<line x1="690" y1="235" x2="690" y2="253" stroke="#2D3748" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<line x1="690" y1="295" x2="690" y2="313" stroke="#2D3748" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<line x1="550" y1="198" x2="610" y2="190" stroke="#2E7BF6" stroke-width="1.2" marker-end="url(#arrowhead)"/>
+<line x1="550" y1="268" x2="610" y2="215" stroke="#22C1A6" stroke-width="1.2" marker-end="url(#arrowhead)"/>
+<line x1="550" y1="338" x2="610" y2="330" stroke="#FF8A3D" stroke-width="1.2" marker-end="url(#arrowhead)"/>
+<text x="690" y="375" font-size="12" fill="#2D3748" text-anchor="middle" font-weight="500" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Contextual Output</text>
+</svg>

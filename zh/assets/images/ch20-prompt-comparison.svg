@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+<defs>
+<marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+  <polygon points="0 0, 10 3.5, 0 7" fill="#2D3748"/>
+</marker>
+<filter id="shadow" x="-4%" y="-4%" width="108%" height="108%">
+  <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.08"/>
+</filter>
+</defs>
+<rect x="0" y="0" width="800" height="450" rx="0" fill="#F8FAFE"/>
+<text x="400" y="30" font-size="22" fill="#2D3748" text-anchor="middle" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Good Prompt vs. Bad Prompt</text>
+<line x1="400" y1="55" x2="400" y2="430" stroke="#E2E8F0" stroke-width="2" stroke-dasharray="6,4"/>
+<rect x="30" y="60" width="340" height="370" rx="12" fill="#FFF5F5" stroke="#FC8181" stroke-width="1.5"/>
+<rect x="30" y="60" width="340" height="40" rx="12" fill="#FC8181" opacity="0.15"/>
+<rect x="30" y="90" width="340" height="10" rx="0" fill="#FC8181" opacity="0.15"/>
+<text x="200" y="84" font-size="15" fill="#E53E3E" text-anchor="middle" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">✗ Bad Prompt</text>
+<rect x="50" y="115" width="300" height="50" rx="6" fill="#FFFFFF" stroke="#CBD5E0" stroke-width="1.5"/>
+<text x="60" y="135" font-size="12" fill="#718096" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">&quot;Write something about AI&quot;</text>
+<text x="60" y="155" font-size="10" fill="#A0AEC0" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">(vague, no context)</text>
+<text x="200" y="190" font-size="11" fill="#A0AEC0" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">↓ AI Response</text>
+<rect x="50" y="205" width="300" height="120" rx="6" fill="#EDF2F7" stroke="#CBD5E0" stroke-width="1.5"/>
+<line x1="65" y1="225" x2="257.2896660412804" y2="225" stroke="#CBD5E0" stroke-width="2"/>
+<line x1="65" y1="245" x2="156.7814959987997" y2="245" stroke="#CBD5E0" stroke-width="2"/>
+<line x1="65" y1="265" x2="289.79373057920935" y2="265" stroke="#CBD5E0" stroke-width="2"/>
+<line x1="65" y1="285" x2="268.06151968400843" y2="285" stroke="#CBD5E0" stroke-width="2"/>
+<line x1="65" y1="305" x2="125.17827314019375" y2="305" stroke="#CBD5E0" stroke-width="2"/>
+<text x="200" y="295" font-size="16" fill="#A0AEC0" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">???</text>
+<text x="60" y="350" font-size="11" fill="#718096" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">• No role specified</text>
+<text x="60" y="370" font-size="11" fill="#718096" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">• No clear task</text>
+<text x="60" y="390" font-size="11" fill="#718096" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">• No format constraints</text>
+<text x="60" y="410" font-size="11" fill="#718096" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">• No examples given</text>
+<rect x="430" y="60" width="340" height="370" rx="12" fill="#F0FFF4" stroke="#68D391" stroke-width="1.5"/>
+<rect x="430" y="60" width="340" height="40" rx="12" fill="#68D391" opacity="0.15"/>
+<rect x="430" y="90" width="340" height="10" rx="0" fill="#68D391" opacity="0.15"/>
+<text x="600" y="84" font-size="15" fill="#276749" text-anchor="middle" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">✓ Good Prompt</text>
+<rect x="450" y="115" width="300" height="90" rx="6" fill="#FFFFFF" stroke="#68D391" stroke-width="1.5"/>
+<text x="460" y="133" font-size="11" fill="#276749" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Role: AI researcher</text>
+<text x="460" y="150" font-size="11" fill="#276749" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Task: List 3 benefits of transformers</text>
+<text x="460" y="167" font-size="11" fill="#276749" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Format: Numbered, one sentence each</text>
+<text x="460" y="184" font-size="11" fill="#276749" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Tone: Simple, for beginners</text>
+<text x="600" y="225" font-size="11" fill="#276749" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">↓ AI Response</text>
+<rect x="450" y="240" width="300" height="100" rx="6" fill="#FFFFFF" stroke="#68D391" stroke-width="1.5"/>
+<text x="465" y="262" font-size="11" fill="#2D3748" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">1. Parallel processing of sequences</text>
+<text x="465" y="282" font-size="11" fill="#2D3748" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">2. Better long-range dependencies</text>
+<text x="465" y="302" font-size="11" fill="#2D3748" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">3. Scalable to massive datasets</text>
+<text x="600" y="330" font-size="11" fill="#276749" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">✓ Clear &amp; Structured</text>
+<text x="460" y="365" font-size="11" fill="#276749" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">✓ Defined role &amp; expertise</text>
+<text x="460" y="385" font-size="11" fill="#276749" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">✓ Specific task</text>
+<text x="460" y="405" font-size="11" fill="#276749" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">✓ Clear format &amp; constraints</text>
+</svg>

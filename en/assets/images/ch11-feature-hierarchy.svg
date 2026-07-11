@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+<defs>
+<marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+  <polygon points="0 0, 10 3.5, 0 7" fill="#2D3748"/>
+</marker>
+<filter id="shadow" x="-4%" y="-4%" width="108%" height="108%">
+  <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.08"/>
+</filter>
+</defs>
+<rect x="0" y="0" width="800" height="450" rx="0" fill="#F8FAFE"/>
+<text x="400" y="35" font-size="22" fill="#2D3748" text-anchor="middle" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Why Go Deep? Feature Hierarchy</text>
+<rect x="80" y="90" width="140" height="220" rx="10" fill="#FFFFFF" stroke="#22C1A6" stroke-width="2"/>
+<text x="150" y="110" font-size="13" fill="#22C1A6" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Layer 1</text>
+<text x="150" y="330" font-size="12" fill="#2D3748" text-anchor="middle" font-weight="500" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Pixels</text>
+<line x1="230" y1="200" x2="260" y2="200" stroke="#718096" stroke-width="2" marker-end="url(#arrowhead)"/>
+<rect x="270" y="90" width="140" height="220" rx="10" fill="#FFFFFF" stroke="#2E7BF6" stroke-width="2"/>
+<text x="340" y="110" font-size="13" fill="#2E7BF6" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Layer 2</text>
+<text x="340" y="330" font-size="12" fill="#2D3748" text-anchor="middle" font-weight="500" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Edges &amp; Lines</text>
+<line x1="420" y1="200" x2="460" y2="200" stroke="#718096" stroke-width="2" marker-end="url(#arrowhead)"/>
+<rect x="470" y="90" width="140" height="220" rx="10" fill="#FFFFFF" stroke="#2E7BF6" stroke-width="2"/>
+<text x="540" y="110" font-size="13" fill="#2E7BF6" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Layer 3</text>
+<text x="540" y="330" font-size="12" fill="#2D3748" text-anchor="middle" font-weight="500" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Parts</text>
+<line x1="620" y1="200" x2="650" y2="200" stroke="#718096" stroke-width="2" marker-end="url(#arrowhead)"/>
+<rect x="660" y="90" width="140" height="220" rx="10" fill="#FFFFFF" stroke="#FF8A3D" stroke-width="2"/>
+<text x="730" y="110" font-size="13" fill="#FF8A3D" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Layer 4</text>
+<text x="730" y="330" font-size="12" fill="#2D3748" text-anchor="middle" font-weight="500" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Full Object</text>
+<rect x="95" y="120" width="16" height="16" rx="2" fill="#2E7BF6" opacity="0.6"/>
+<rect x="117" y="120" width="16" height="16" rx="2" fill="#22C1A6" opacity="0.6"/>
+<rect x="139" y="120" width="16" height="16" rx="2" fill="#FF8A3D" opacity="0.6"/>
+<rect x="161" y="120" width="16" height="16" rx="2" fill="#9F7AEA" opacity="0.6"/>
+<rect x="183" y="120" width="16" height="16" rx="2" fill="#48BB78" opacity="0.6"/>
+<rect x="95" y="150" width="16" height="16" rx="2" fill="#22C1A6" opacity="0.6"/>
+<rect x="117" y="150" width="16" height="16" rx="2" fill="#FF8A3D" opacity="0.6"/>
+<rect x="139" y="150" width="16" height="16" rx="2" fill="#9F7AEA" opacity="0.6"/>
+<rect x="161" y="150" width="16" height="16" rx="2" fill="#48BB78" opacity="0.6"/>
+<rect x="183" y="150" width="16" height="16" rx="2" fill="#2E7BF6" opacity="0.6"/>
+<rect x="95" y="180" width="16" height="16" rx="2" fill="#FF8A3D" opacity="0.6"/>
+<rect x="117" y="180" width="16" height="16" rx="2" fill="#9F7AEA" opacity="0.6"/>
+<rect x="139" y="180" width="16" height="16" rx="2" fill="#48BB78" opacity="0.6"/>
+<rect x="161" y="180" width="16" height="16" rx="2" fill="#2E7BF6" opacity="0.6"/>
+<rect x="183" y="180" width="16" height="16" rx="2" fill="#22C1A6" opacity="0.6"/>
+<rect x="95" y="210" width="16" height="16" rx="2" fill="#9F7AEA" opacity="0.6"/>
+<rect x="117" y="210" width="16" height="16" rx="2" fill="#48BB78" opacity="0.6"/>
+<rect x="139" y="210" width="16" height="16" rx="2" fill="#2E7BF6" opacity="0.6"/>
+<rect x="161" y="210" width="16" height="16" rx="2" fill="#22C1A6" opacity="0.6"/>
+<rect x="183" y="210" width="16" height="16" rx="2" fill="#FF8A3D" opacity="0.6"/>
+<rect x="95" y="240" width="16" height="16" rx="2" fill="#48BB78" opacity="0.6"/>
+<rect x="117" y="240" width="16" height="16" rx="2" fill="#2E7BF6" opacity="0.6"/>
+<rect x="139" y="240" width="16" height="16" rx="2" fill="#22C1A6" opacity="0.6"/>
+<rect x="161" y="240" width="16" height="16" rx="2" fill="#FF8A3D" opacity="0.6"/>
+<rect x="183" y="240" width="16" height="16" rx="2" fill="#9F7AEA" opacity="0.6"/>
+<rect x="95" y="270" width="16" height="16" rx="2" fill="#2E7BF6" opacity="0.6"/>
+<rect x="117" y="270" width="16" height="16" rx="2" fill="#22C1A6" opacity="0.6"/>
+<rect x="139" y="270" width="16" height="16" rx="2" fill="#FF8A3D" opacity="0.6"/>
+<rect x="161" y="270" width="16" height="16" rx="2" fill="#9F7AEA" opacity="0.6"/>
+<rect x="183" y="270" width="16" height="16" rx="2" fill="#48BB78" opacity="0.6"/>
+<line x1="290" y1="130" x2="340" y2="170" stroke="#2D3748" stroke-width="2"/>
+<line x1="290" y1="170" x2="370" y2="170" stroke="#2D3748" stroke-width="2"/>
+<line x1="310" y1="200" x2="310" y2="260" stroke="#2D3748" stroke-width="2"/>
+<path d="M280,230 Q320,210 360,240" fill="none" stroke="#2D3748" stroke-width="2"/>
+<line x1="290" y1="270" x2="360" y2="270" stroke="#2D3748" stroke-width="2"/>
+<path d="M490,140 Q510,125 530,140 Q510,155 490,140" fill="none" stroke="#2E7BF6" stroke-width="2"/>
+<circle cx="510" cy="140" r="4" fill="#2E7BF6"/>
+<path d="M490,180 Q510,165 530,180 Q510,195 490,180" fill="none" stroke="#2E7BF6" stroke-width="2"/>
+<circle cx="510" cy="180" r="4" fill="#2E7BF6"/>
+<path d="M510,210 L500,250 L520,250" fill="none" stroke="#2E7BF6" stroke-width="2"/>
+<path d="M490,275 Q510,290 530,275" fill="none" stroke="#2E7BF6" stroke-width="2"/>
+<circle cx="730" cy="195" r="55" fill="none" stroke="#FF8A3D" stroke-width="2.5"/>
+<circle cx="715" cy="180" r="5" fill="#2D3748"/>
+<circle cx="745" cy="180" r="5" fill="#2D3748"/>
+<path d="M730,190 L726,208 L734,208" fill="none" stroke="#2D3748" stroke-width="1.5"/>
+<path d="M715,222 Q730,235 745,222" fill="none" stroke="#2D3748" stroke-width="2"/>
+<rect x="200" y="380" width="400" height="35" rx="17" fill="#EBF4FF"/>
+<text x="400" y="398" font-size="14" fill="#2E7BF6" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Concrete  →  →  →  Abstract</text>
+</svg>

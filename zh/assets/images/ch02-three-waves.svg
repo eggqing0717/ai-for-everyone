@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+<defs>
+<marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+  <polygon points="0 0, 10 3.5, 0 7" fill="#2D3748"/>
+</marker>
+<filter id="shadow" x="-4%" y="-4%" width="108%" height="108%">
+  <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.08"/>
+</filter>
+</defs>
+<rect x="0" y="0" width="800" height="450" rx="0" fill="#F8FAFE"/>
+<text x="400" y="38" font-size="26" fill="#2D3748" text-anchor="middle" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Three Waves of AI</text>
+<line x1="60" y1="320" x2="740" y2="320" stroke="#2D3748" stroke-width="2"/>
+<line x1="730" y1="320" x2="755" y2="320" stroke="#2D3748" stroke-width="2" marker-end="url(#arrowhead)"/>
+<text x="140" y="345" font-size="12" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">1950s</text>
+<text x="400" y="345" font-size="12" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">1980s</text>
+<text x="640" y="345" font-size="12" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">2010s</text>
+<text x="755" y="340" font-size="11" fill="#2D3748" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Now</text>
+<path d="M80,320 Q140,180 200,320" fill="#FF8A3D" stroke="#FF8A3D" stroke-width="2" opacity="0.2"/>
+<circle cx="140" cy="200" r="6" fill="#FF8A3D"/>
+<text x="140" y="100" font-size="14" fill="#FF8A3D" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">1st Wave</text>
+<text x="140" y="120" font-size="12" fill="#2D3748" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Symbolism</text>
+<text x="140" y="138" font-size="11" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Hand-written rules</text>
+<text x="270" y="360" font-size="10" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">AI Winter</text>
+<line x1="220" y1="320" x2="320" y2="320" stroke="#718096" stroke-width="1" stroke-dasharray="3,3"/>
+<path d="M320,320 Q400,160 480,320" fill="#2E7BF6" stroke="#2E7BF6" stroke-width="2" opacity="0.15"/>
+<circle cx="400" cy="180" r="6" fill="#2E7BF6"/>
+<text x="400" y="100" font-size="14" fill="#2E7BF6" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">2nd Wave</text>
+<text x="400" y="120" font-size="12" fill="#2D3748" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Machine Learning</text>
+<text x="400" y="138" font-size="11" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Patterns from data</text>
+<text x="530" y="360" font-size="10" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">AI Winter</text>
+<line x1="490" y1="320" x2="570" y2="320" stroke="#718096" stroke-width="1" stroke-dasharray="3,3"/>
+<path d="M570,320 Q640,100 740,130" fill="#22C1A6" stroke="#22C1A6" stroke-width="2.5" opacity="0.15"/>
+<circle cx="640" cy="140" r="6" fill="#22C1A6"/>
+<text x="660" y="80" font-size="14" fill="#22C1A6" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">3rd Wave</text>
+<text x="660" y="100" font-size="12" fill="#2D3748" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Deep Learning</text>
+<text x="660" y="118" font-size="11" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Brain-inspired networks</text>
+<text x="730" y="110" font-size="18" fill="#22C1A6" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">↑</text>
+<rect x="180" y="395" width="12" height="12" rx="2" fill="#FF8A3D" opacity="0.7"/>
+<text x="198" y="403" font-size="11" fill="#718096" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Rules-based</text>
+<rect x="340" y="395" width="12" height="12" rx="2" fill="#2E7BF6" opacity="0.7"/>
+<text x="358" y="403" font-size="11" fill="#718096" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Statistical</text>
+<rect x="480" y="395" width="12" height="12" rx="2" fill="#22C1A6" opacity="0.7"/>
+<text x="498" y="403" font-size="11" fill="#718096" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Neural networks</text>
+<circle cx="50" cy="50" r="4" fill="#2E7BF6" opacity="0.3"/>
+<circle cx="770" cy="420" r="4" fill="#22C1A6" opacity="0.3"/>
+</svg>

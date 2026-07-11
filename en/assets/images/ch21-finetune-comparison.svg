@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+<defs>
+<marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+  <polygon points="0 0, 10 3.5, 0 7" fill="#2D3748"/>
+</marker>
+<filter id="shadow" x="-4%" y="-4%" width="108%" height="108%">
+  <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.08"/>
+</filter>
+</defs>
+<rect x="0" y="0" width="800" height="450" rx="0" fill="#F8FAFE"/>
+<text x="400" y="30" font-size="22" fill="#2D3748" text-anchor="middle" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Pretrain vs. Fine-tune vs. RAG</text>
+<rect x="30" y="55" width="230" height="340" rx="12" fill="#FFFFFF" stroke="#2E7BF6" stroke-width="2"/>
+<rect x="30" y="55" width="230" height="50" rx="12" fill="#2E7BF6" opacity="0.1"/>
+<rect x="30" y="95" width="230" height="10" rx="0" fill="#2E7BF6" opacity="0.1"/>
+<text x="145" y="75" font-size="20" fill="#2D3748" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">📚</text>
+<text x="145" y="95" font-size="14" fill="#2E7BF6" text-anchor="middle" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Pretraining</text>
+<rect x="285" y="55" width="230" height="340" rx="12" fill="#FFFFFF" stroke="#FF8A3D" stroke-width="2"/>
+<rect x="285" y="55" width="230" height="50" rx="12" fill="#FF8A3D" opacity="0.1"/>
+<rect x="285" y="95" width="230" height="10" rx="0" fill="#FF8A3D" opacity="0.1"/>
+<text x="400" y="75" font-size="20" fill="#2D3748" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">🎯</text>
+<text x="400" y="95" font-size="14" fill="#FF8A3D" text-anchor="middle" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Fine-tuning</text>
+<rect x="540" y="55" width="230" height="340" rx="12" fill="#FFFFFF" stroke="#22C1A6" stroke-width="2"/>
+<rect x="540" y="55" width="230" height="50" rx="12" fill="#22C1A6" opacity="0.1"/>
+<rect x="540" y="95" width="230" height="10" rx="0" fill="#22C1A6" opacity="0.1"/>
+<text x="655" y="75" font-size="20" fill="#2D3748" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">🔍</text>
+<text x="655" y="95" font-size="14" fill="#22C1A6" text-anchor="middle" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">RAG</text>
+<rect x="50" y="120" width="190" height="40" rx="6" fill="#EBF4FF"/>
+<text x="145" y="142" font-size="11" fill="#2E7BF6" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Massive text corpus</text>
+<line x1="145" y1="165" x2="145" y2="185" stroke="#2D3748" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<rect x="50" y="190" width="190" height="45" rx="6" fill="#2E7BF6" opacity="0.1"/>
+<text x="145" y="208" font-size="11" fill="#2E7BF6" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Train from scratch</text>
+<text x="145" y="225" font-size="10" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">(weeks on GPUs)</text>
+<line x1="145" y1="240" x2="145" y2="260" stroke="#2D3748" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<rect x="50" y="265" width="190" height="40" rx="6" fill="#EBF4FF"/>
+<text x="145" y="287" font-size="11" fill="#2E7BF6" text-anchor="middle" font-weight="500" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Base Model (general)</text>
+<text x="145" y="330" font-size="11" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Cost: $$$$$</text>
+<text x="145" y="350" font-size="10" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Data: Trillions of tokens</text>
+<rect x="305" y="120" width="190" height="40" rx="6" fill="#FFF3EB"/>
+<text x="400" y="142" font-size="11" fill="#FF8A3D" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Task-specific data</text>
+<line x1="400" y1="165" x2="400" y2="185" stroke="#2D3748" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<rect x="305" y="190" width="190" height="45" rx="6" fill="#FF8A3D" opacity="0.1"/>
+<text x="400" y="208" font-size="11" fill="#FF8A3D" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Adjust base model</text>
+<text x="400" y="225" font-size="10" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">(hours/days)</text>
+<line x1="400" y1="240" x2="400" y2="260" stroke="#2D3748" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<rect x="305" y="265" width="190" height="40" rx="6" fill="#FFF3EB"/>
+<text x="400" y="287" font-size="11" fill="#FF8A3D" text-anchor="middle" font-weight="500" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Specialist Model</text>
+<text x="400" y="330" font-size="11" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Cost: $$</text>
+<text x="400" y="350" font-size="10" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Data: 1K-100K samples</text>
+<rect x="560" y="120" width="190" height="40" rx="6" fill="#E6FAF5"/>
+<text x="655" y="142" font-size="11" fill="#22C1A6" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">External knowledge base</text>
+<line x1="655" y1="165" x2="655" y2="185" stroke="#2D3748" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<rect x="560" y="190" width="190" height="45" rx="6" fill="#22C1A6" opacity="0.1"/>
+<text x="655" y="208" font-size="11" fill="#22C1A6" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Retrieve + Generate</text>
+<text x="655" y="225" font-size="10" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">(real-time)</text>
+<line x1="655" y1="240" x2="655" y2="260" stroke="#2D3748" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<rect x="560" y="265" width="190" height="40" rx="6" fill="#E6FAF5"/>
+<text x="655" y="287" font-size="11" fill="#22C1A6" text-anchor="middle" font-weight="500" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Grounded answers</text>
+<text x="655" y="330" font-size="11" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Cost: $</text>
+<text x="655" y="350" font-size="10" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">No model change needed</text>
+<rect x="100" y="410" width="600" height="30" rx="6" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+<text x="400" y="428" font-size="11" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Effort &amp; Cost:  High ←――――――→ Low  |  Flexibility:  Low ←――――――→ High</text>
+</svg>

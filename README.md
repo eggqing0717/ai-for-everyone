@@ -1,3 +1,9 @@
+# AI for Everyone | 人人都能懂的 AI
+
+A multilingual AI knowledge base.
+
+- [简体中文版](zh/)
+- [English Version](en/)
 # 人人都能懂的 AI
 
 > **让每个普通人都能读懂 AI 的底层原理。**

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+<defs>
+<marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+  <polygon points="0 0, 10 3.5, 0 7" fill="#2D3748"/>
+</marker>
+<filter id="shadow" x="-4%" y="-4%" width="108%" height="108%">
+  <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.08"/>
+</filter>
+</defs>
+<rect x="0" y="0" width="800" height="450" rx="0" fill="#F8FAFE"/>
+<text x="400" y="35" font-size="22" fill="#2D3748" text-anchor="middle" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Multi-Head Attention</text>
+<text x="400" y="58" font-size="12" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Multiple heads understand from different angles</text>
+<rect x="100" y="80" width="300" height="40" rx="8" fill="#EBF4FF" opacity="0.5"/>
+<text x="130" y="100" font-size="12" fill="#2D3748" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">He</text>
+<text x="178" y="100" font-size="12" fill="#2D3748" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">lent</text>
+<text x="226" y="100" font-size="12" fill="#2D3748" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">the</text>
+<text x="274" y="100" font-size="12" fill="#2D3748" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">book</text>
+<text x="322" y="100" font-size="12" fill="#2D3748" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">to</text>
+<text x="370" y="100" font-size="12" fill="#2D3748" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">her</text>
+<rect x="80" y="140" width="340" height="30" rx="4" fill="#2E7BF6" opacity="0.12"/>
+<rect x="80" y="140" width="340" height="30" rx="4" fill="none" stroke="#2E7BF6" stroke-width="1.5" opacity="0.6"/>
+<text x="95" y="155" font-size="9" fill="#2E7BF6" text-anchor="start" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Head 1</text>
+<text x="410" y="155" font-size="10" fill="#2E7BF6" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Grammar</text>
+<rect x="80" y="174" width="340" height="30" rx="4" fill="#22C1A6" opacity="0.12"/>
+<rect x="80" y="174" width="340" height="30" rx="4" fill="none" stroke="#22C1A6" stroke-width="1.5" opacity="0.6"/>
+<text x="95" y="189" font-size="9" fill="#22C1A6" text-anchor="start" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Head 2</text>
+<text x="410" y="189" font-size="10" fill="#22C1A6" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Reference</text>
+<rect x="80" y="208" width="340" height="30" rx="4" fill="#FF8A3D" opacity="0.12"/>
+<rect x="80" y="208" width="340" height="30" rx="4" fill="none" stroke="#FF8A3D" stroke-width="1.5" opacity="0.6"/>
+<text x="95" y="223" font-size="9" fill="#FF8A3D" text-anchor="start" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Head 3</text>
+<text x="410" y="223" font-size="10" fill="#FF8A3D" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Semantics</text>
+<rect x="80" y="242" width="340" height="30" rx="4" fill="#9F7AEA" opacity="0.12"/>
+<rect x="80" y="242" width="340" height="30" rx="4" fill="none" stroke="#9F7AEA" stroke-width="1.5" opacity="0.6"/>
+<text x="95" y="257" font-size="9" fill="#9F7AEA" text-anchor="start" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Head 4</text>
+<text x="410" y="257" font-size="10" fill="#9F7AEA" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Temporal</text>
+<rect x="80" y="276" width="340" height="30" rx="4" fill="#E53E3E" opacity="0.12"/>
+<rect x="80" y="276" width="340" height="30" rx="4" fill="none" stroke="#E53E3E" stroke-width="1.5" opacity="0.6"/>
+<text x="95" y="291" font-size="9" fill="#E53E3E" text-anchor="start" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Head 5</text>
+<text x="410" y="291" font-size="10" fill="#E53E3E" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Subject</text>
+<rect x="80" y="310" width="340" height="30" rx="4" fill="#38B2AC" opacity="0.12"/>
+<rect x="80" y="310" width="340" height="30" rx="4" fill="none" stroke="#38B2AC" stroke-width="1.5" opacity="0.6"/>
+<text x="95" y="325" font-size="9" fill="#38B2AC" text-anchor="start" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Head 6</text>
+<text x="410" y="325" font-size="10" fill="#38B2AC" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Object</text>
+<rect x="80" y="344" width="340" height="30" rx="4" fill="#D69E2E" opacity="0.12"/>
+<rect x="80" y="344" width="340" height="30" rx="4" fill="none" stroke="#D69E2E" stroke-width="1.5" opacity="0.6"/>
+<text x="95" y="359" font-size="9" fill="#D69E2E" text-anchor="start" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Head 7</text>
+<text x="410" y="359" font-size="10" fill="#D69E2E" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Context</text>
+<rect x="80" y="378" width="340" height="30" rx="4" fill="#667EEA" opacity="0.12"/>
+<rect x="80" y="378" width="340" height="30" rx="4" fill="none" stroke="#667EEA" stroke-width="1.5" opacity="0.6"/>
+<text x="95" y="393" font-size="9" fill="#667EEA" text-anchor="start" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Head 8</text>
+<text x="410" y="393" font-size="10" fill="#667EEA" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Theme</text>
+<line x1="430" y1="270" x2="530" y2="270" stroke="#2D3748" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<rect x="540" y="180" width="120" height="180" rx="12" fill="#FFFFFF" stroke="#2E7BF6" stroke-width="1.5"/>
+<text x="600" y="250" font-size="14" fill="#2E7BF6" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Concat</text>
+<text x="600" y="275" font-size="16" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">+</text>
+<text x="600" y="300" font-size="14" fill="#2E7BF6" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Linear</text>
+<line x1="665" y1="270" x2="730" y2="270" stroke="#2E7BF6" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+<rect x="735" y="240" width="50" height="60" rx="8" fill="#EBF4FF" stroke="#2E7BF6" stroke-width="1.5"/>
+<text x="760" y="270" font-size="12" fill="#2E7BF6" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Out</text>
+<text x="400" y="430" font-size="11" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">8 experts analyze the same sentence from different perspectives, then combine insights</text>
+</svg>

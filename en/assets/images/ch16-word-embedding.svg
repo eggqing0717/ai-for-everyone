@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+<defs>
+<marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+  <polygon points="0 0, 10 3.5, 0 7" fill="#2D3748"/>
+</marker>
+<filter id="shadow" x="-4%" y="-4%" width="108%" height="108%">
+  <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.08"/>
+</filter>
+</defs>
+<rect x="0" y="0" width="800" height="450" rx="0" fill="#F8FAFE"/>
+<text x="400" y="30" font-size="22" fill="#2D3748" text-anchor="middle" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Word Embedding: 2D Visualization</text>
+<line x1="120" y1="380" x2="720" y2="380" stroke="#2D3748" stroke-width="2" marker-end="url(#arrowhead)"/>
+<line x1="120" y1="380" x2="120" y2="80" stroke="#2D3748" stroke-width="2" marker-end="url(#arrowhead)"/>
+<text x="730" y="385" font-size="12" fill="#718096" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Dim 1</text>
+<text x="110" y="70" font-size="12" fill="#718096" text-anchor="middle" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Dim 2</text>
+<circle cx="520" cy="330" r="65" fill="#FF8A3D" stroke="#FF8A3D" stroke-width="1.5" opacity="0.08"/>
+<text x="520" y="395" font-size="12" fill="#FF8A3D" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Fruits</text>
+<circle cx="480" cy="330" r="6" fill="#FF8A3D"/>
+<text x="490" y="320" font-size="11" fill="#2D3748" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">apple</text>
+<circle cx="530" cy="300" r="6" fill="#FF8A3D"/>
+<text x="540" y="290" font-size="11" fill="#2D3748" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">banana</text>
+<circle cx="510" cy="360" r="6" fill="#FF8A3D"/>
+<text x="520" y="350" font-size="11" fill="#2D3748" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">orange</text>
+<circle cx="560" cy="330" r="6" fill="#FF8A3D"/>
+<text x="570" y="320" font-size="11" fill="#2D3748" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">grape</text>
+<circle cx="230" cy="145" r="60" fill="#2E7BF6" stroke="#2E7BF6" stroke-width="1.5" opacity="0.08"/>
+<text x="230" y="85" font-size="12" fill="#2E7BF6" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Animals</text>
+<circle cx="200" cy="140" r="6" fill="#2E7BF6"/>
+<text x="210" y="130" font-size="11" fill="#2D3748" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">cat</text>
+<circle cx="240" cy="120" r="6" fill="#2E7BF6"/>
+<text x="250" y="110" font-size="11" fill="#2D3748" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">dog</text>
+<circle cx="220" cy="170" r="6" fill="#2E7BF6"/>
+<text x="230" y="160" font-size="11" fill="#2D3748" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">tiger</text>
+<circle cx="260" cy="155" r="6" fill="#2E7BF6"/>
+<text x="270" y="145" font-size="11" fill="#2D3748" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">lion</text>
+<circle cx="405" cy="218" r="55" fill="#22C1A6" stroke="#22C1A6" stroke-width="1.5" opacity="0.08"/>
+<text x="405" y="275" font-size="12" fill="#22C1A6" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Tech</text>
+<circle cx="400" cy="200" r="6" fill="#22C1A6"/>
+<text x="410" y="190" font-size="11" fill="#2D3748" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">computer</text>
+<circle cx="440" cy="220" r="6" fill="#22C1A6"/>
+<text x="450" y="210" font-size="11" fill="#2D3748" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">phone</text>
+<circle cx="380" cy="235" r="6" fill="#22C1A6"/>
+<text x="390" y="225" font-size="11" fill="#2D3748" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">tablet</text>
+<rect x="600" y="80" width="170" height="100" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+<text x="685" y="100" font-size="12" fill="#2D3748" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Similar words</text>
+<text x="685" y="120" font-size="12" fill="#2D3748" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">cluster together</text>
+<circle cx="625" cy="145" r="5" fill="#2E7BF6"/>
+<text x="640" y="145" font-size="11" fill="#718096" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Animals</text>
+<circle cx="625" cy="165" r="5" fill="#FF8A3D"/>
+<text x="640" y="165" font-size="11" fill="#718096" text-anchor="start" font-weight="normal" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Fruits</text>
+</svg>

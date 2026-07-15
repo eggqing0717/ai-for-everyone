@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" width="900" height="420">
+<defs>
+<marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+  <polygon points="0 0, 10 3.5, 0 7" fill="#2D3748"/>
+</marker>
+<filter id="shadow" x="-4%" y="-4%" width="108%" height="108%">
+  <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.08"/>
+</filter>
+</defs>
+<rect x="0" y="0" width="900" height="420" rx="0" fill="#F8FAFE"/>
+<text x="450" y="32" font-size="18" fill="#2D3748" text-anchor="middle" font-weight="bold" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">LLM Training Pipeline: From Raw Data to Deployed Model</text>
+
+<!-- Stage 1: Pre-training -->
+<rect x="30" y="70" width="180" height="180" rx="12" fill="#EBF4FF" stroke="#2E7BF6" stroke-width="1.5" filter="url(#shadow)"/>
+<text x="120" y="95" font-size="15" fill="#2E7BF6" text-anchor="middle" font-weight="700" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Pre-training</text>
+<line x1="50" y1="112" x2="190" y2="112" stroke="#CBD5E0" stroke-width="1"/>
+<text x="120" y="132" font-size="11" fill="#4A5568" text-anchor="middle" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Data: Trillions of tokens</text>
+<text x="120" y="150" font-size="11" fill="#4A5568" text-anchor="middle" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">(Web, Books, Code)</text>
+<text x="120" y="175" font-size="11" fill="#4A5568" text-anchor="middle" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Method: Next Token</text>
+<text x="120" y="193" font-size="11" fill="#4A5568" text-anchor="middle" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Prediction</text>
+<text x="120" y="218" font-size="11" fill="#2E7BF6" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Output: Foundation</text>
+<text x="120" y="236" font-size="11" fill="#2E7BF6" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Model</text>
+
+<!-- Arrow 1 -->
+<line x1="215" y1="160" x2="255" y2="160" stroke="#2D3748" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+<!-- Stage 2: SFT -->
+<rect x="260" y="70" width="180" height="180" rx="12" fill="#FFF3EB" stroke="#FF8A3D" stroke-width="1.5" filter="url(#shadow)"/>
+<text x="350" y="95" font-size="15" fill="#FF8A3D" text-anchor="middle" font-weight="700" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">SFT</text>
+<line x1="280" y1="112" x2="420" y2="112" stroke="#CBD5E0" stroke-width="1"/>
+<text x="350" y="132" font-size="11" fill="#4A5568" text-anchor="middle" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Data: 10K-100K</text>
+<text x="350" y="150" font-size="11" fill="#4A5568" text-anchor="middle" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">instruction pairs</text>
+<text x="350" y="175" font-size="11" fill="#4A5568" text-anchor="middle" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Method: LoRA / QLoRA</text>
+<text x="350" y="193" font-size="11" fill="#4A5568" text-anchor="middle" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Full fine-tuning</text>
+<text x="350" y="218" font-size="11" fill="#FF8A3D" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Output: Instruction-</text>
+<text x="350" y="236" font-size="11" fill="#FF8A3D" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">following Model</text>
+
+<!-- Arrow 2 -->
+<line x1="445" y1="160" x2="485" y2="160" stroke="#2D3748" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+<!-- Stage 3: RLHF -->
+<rect x="490" y="70" width="180" height="180" rx="12" fill="#E6FAF5" stroke="#22C1A6" stroke-width="1.5" filter="url(#shadow)"/>
+<text x="580" y="95" font-size="15" fill="#22C1A6" text-anchor="middle" font-weight="700" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">RLHF / DPO</text>
+<line x1="510" y1="112" x2="650" y2="112" stroke="#CBD5E0" stroke-width="1"/>
+<text x="580" y="132" font-size="11" fill="#4A5568" text-anchor="middle" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Data: Human preference</text>
+<text x="580" y="150" font-size="11" fill="#4A5568" text-anchor="middle" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">comparisons (A vs B)</text>
+<text x="580" y="175" font-size="11" fill="#4A5568" text-anchor="middle" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Method: Reward Model</text>
+<text x="580" y="193" font-size="11" fill="#4A5568" text-anchor="middle" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">+ PPO / DPO</text>
+<text x="580" y="218" font-size="11" fill="#22C1A6" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Output: Aligned</text>
+<text x="580" y="236" font-size="11" fill="#22C1A6" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Model</text>
+
+<!-- Arrow 3 -->
+<line x1="675" y1="160" x2="715" y2="160" stroke="#2D3748" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+<!-- Stage 4: Deployment -->
+<rect x="720" y="70" width="150" height="180" rx="12" fill="#F0FFF4" stroke="#48BB78" stroke-width="1.5" filter="url(#shadow)"/>
+<text x="795" y="95" font-size="15" fill="#276749" text-anchor="middle" font-weight="700" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Deployment</text>
+<line x1="740" y1="112" x2="850" y2="112" stroke="#CBD5E0" stroke-width="1"/>
+<text x="795" y="132" font-size="11" fill="#4A5568" text-anchor="middle" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Quantization</text>
+<text x="795" y="150" font-size="11" fill="#4A5568" text-anchor="middle" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">(INT4/INT8)</text>
+<text x="795" y="175" font-size="11" fill="#4A5568" text-anchor="middle" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">KV Cache</text>
+<text x="795" y="193" font-size="11" fill="#4A5568" text-anchor="middle" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Flash Attention</text>
+<text x="795" y="218" font-size="11" fill="#276749" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Output: Production</text>
+<text x="795" y="236" font-size="11" fill="#276749" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">API / App</text>
+
+<!-- Cost and scale indicators -->
+<rect x="30" y="270" width="180" height="50" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+<text x="120" y="290" font-size="10" fill="#718096" text-anchor="middle" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Cost: $3M - $100M+</text>
+<text x="120" y="306" font-size="10" fill="#718096" text-anchor="middle" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">GPUs: 1000s ~ 10000s</text>
+
+<rect x="260" y="270" width="180" height="50" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+<text x="350" y="290" font-size="10" fill="#718096" text-anchor="middle" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Cost: $100 - $10K</text>
+<text x="350" y="306" font-size="10" fill="#718096" text-anchor="middle" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">GPUs: 1 ~ 8 (with LoRA)</text>
+
+<rect x="490" y="270" width="180" height="50" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+<text x="580" y="290" font-size="10" fill="#718096" text-anchor="middle" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Cost: $1K - $100K</text>
+<text x="580" y="306" font-size="10" fill="#718096" text-anchor="middle" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Needs human annotators</text>
+
+<rect x="720" y="270" width="150" height="50" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+<text x="795" y="290" font-size="10" fill="#718096" text-anchor="middle" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Serving cost per</text>
+<text x="795" y="306" font-size="10" fill="#718096" text-anchor="middle" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">1M tokens: $0.1-$10</text>
+
+<!-- Bottom summary bar -->
+<rect x="30" y="345" width="840" height="55" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+<text x="450" y="365" font-size="12" fill="#2D3748" text-anchor="middle" font-weight="600" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Key Takeaway: Most developers start at Stage 2 (SFT) using open-source foundation models</text>
+<text x="450" y="385" font-size="11" fill="#718096" text-anchor="middle" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif" dy="0.35em">Pre-training is done by large labs (Meta, OpenAI, Google) | You fine-tune on their shoulders</text>
+</svg>

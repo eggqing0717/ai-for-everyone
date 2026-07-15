@@ -42,6 +42,11 @@
   * [Chapter 22: RAG: Giving AI "Long-term Memory"](05-llm-practice/03-rag.md)
   * [Chapter 23: AI's Limitations, Ethics & the Future](05-llm-practice/04-future.md)
 
+## Topics: Deep Dives
+* [Topics Overview](07-topics/README.md)
+  * [Topic 1 AI Agents: Teaching AI to Use Tools](07-topics/01-ai-agent.md)
+  * [Topic 2 LLM Training & Fine-tuning: From Pre-training to RLHF](07-topics/02-llm-training.md)
+
 ## Appendix
 * [Appendix Overview](06-appendix/README.md)
   * [Appendix A: AI Terminology Quick Reference](06-appendix/01-terms.md)

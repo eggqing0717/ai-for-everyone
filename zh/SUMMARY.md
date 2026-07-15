@@ -42,6 +42,11 @@
   * [第22章 RAG 检索增强：给 AI 装上"长期记忆"](05-llm-practice/03-rag.md)
   * [第23章 AI 的局限、伦理与未来](05-llm-practice/04-future.md)
 
+## 专题篇：深入探索
+* [专题导读](07-topics/README.md)
+  * [专题1 AI Agent：让 AI 学会使用工具](07-topics/01-ai-agent.md)
+  * [专题2 大模型训练与微调：从预训练到 RLHF 全流程拆解](07-topics/02-llm-training.md)
+
 ## 附录
 * [本部分导读](06-appendix/README.md)
   * [附录A AI 常用术语速查表](06-appendix/01-terms.md)

@@ -4,13 +4,25 @@
 
 In Chapter 21, we introduced the basic concepts of pre-training and fine-tuning using the "university → graduate school" analogy. This topic takes you inside the workshop to see the **specific operations, key parameters, and engineering details** of each step.
 
+**This article has five parts, progressively deeper:**
+
+| Your Need | Suggested Reading |
+| --- | --- |
+| Understand how LLMs are trained | Read Part 1 (Pre-training) |
+| Want to fine-tune a model yourself | Focus on Part 2 (SFT + LoRA) |
+| Curious why ChatGPT feels so good | Read Part 3 (RLHF) |
+| Planning to deploy in production | Read Part 4 (Deployment Optimization) |
+| Want to get hands-on right now | Jump to Part 5 (Practice Roadmap) |
+
 ## 1. Pre-training: Building the Generalist Brain
 
 Pre-training is the foundation of the entire large model — using massive text to let the model "read all the books in the world," acquiring general language understanding and world knowledge.
 
+Think of pre-training like raising a well-read person: what books you feed them determines who they become. Read enough books across enough topics, and they become a generalist — not yet ready to do specific jobs, but knowledgeable about a little bit of everything.
+
 ### 1.1 Training Data: Where Do Trillions of Tokens Come From?
 
-The "textbooks" for large models are staggering in scale. For example, Llama 3 was pre-trained on approximately **15 trillion (15T) tokens**. Where does all this data come from?
+The "textbooks" for large models are staggering in scale. For example, Llama 3 was pre-trained on approximately **15 trillion (15T) tokens**. Where does all this data come from? Here's a table to give you an intuitive sense:
 
 | Data Source | Typical Share | Content | Quality Processing |
 | --- | --- | --- | --- |
@@ -40,6 +52,8 @@ This is the so-called **Causal Language Model (Causal LM)** — the model can on
 
 In contrast, **Masked Language Models (Masked LM)** like BERT randomly mask some tokens and ask the model to predict what's hidden. Good for understanding tasks but not suitable for generation.
 
+Don't worry if this feels abstract — this comparison makes it crystal clear:
+
 | | Causal LM (GPT-style) | Masked LM (BERT-style) |
 | --- | --- | --- |
 | Training | Predict next token | Predict masked tokens |
@@ -48,6 +62,8 @@ In contrast, **Masked Language Models (Masked LM)** like BERT randomly mask some
 | Current trend | The mainstream choice for LLMs | Mainly used for embedding models |
 
 ### 1.3 Scaling Law: How Big Is "Big Enough"?
+
+It's like cooking — too big a pot with too few ingredients means no flavor (underfitting); too many ingredients for a small pot and it overflows (wasted compute). Large models also have an optimal ratio between "pot" and "ingredients."
 
 DeepMind's **Chinchilla paper** (2022) provided a crucial conclusion:
 
@@ -67,6 +83,8 @@ Their relationship is approximately: `C ≈ 6 × N × D` (each token requires ~6
 
 ### 1.4 Training Infrastructure: GPU Clusters and Distributed Strategies
 
+One person moving bricks is too slow, so you get ten thousand people to help — but coordinating them so nobody collides, slacks off, or duplicates work is a massive challenge. That's exactly the problem large model training faces.
+
 Training a large model is not a single-GPU job. For Llama 3 405B, Meta used **16,384 H100 GPUs**.
 
 **Three distributed training parallelism strategies:**
@@ -81,7 +99,7 @@ In practice, all three are typically **used together**. For example, Llama 3 use
 
 ### 1.5 Training Cost: How Much Does It Cost?
 
-Here are some concrete numbers to give you a sense of scale:
+You might be wondering: a cluster this big running for this long — what's the price tag? This table will give you a sense:
 
 | Model | Parameters | GPUs | Training Time | Estimated Cost |
 | --- | --- | --- | --- | --- |
@@ -93,9 +111,13 @@ Here are some concrete numbers to give you a sense of scale:
 
 ![LLM Training Full Pipeline](../assets/images/llm-training-pipeline.svg)
 
+> **One-line summary:** Pre-training = massive data + massive compute + the simple goal of "guess the next word" → generalist brain. This step is extremely expensive, but you don't have to do it yourself.
+
 ## 2. Supervised Fine-Tuning (SFT): From "Completion Machine" to "Helpful Assistant"
 
 A pre-trained model is a "super-completer" — you give it a beginning, it continues writing. But it doesn't understand "instructions." SFT's purpose is to teach the model to understand and follow human instructions.
+
+Here's an analogy: a pre-trained model is like a bookworm who's read millions of books — incredibly knowledgeable but socially clueless. You tell them "help me write an email," and they might start writing an academic paper instead. SFT teaches this bookworm to "listen to people and get things done."
 
 ### 2.1 Why Isn't Pre-training Enough?
 
@@ -121,6 +143,8 @@ High-quality SFT datasets typically contain **10K to 100K** carefully annotated 
 
 ### 2.3 Full Fine-tuning vs Parameter-Efficient Fine-Tuning (PEFT)
 
+You might be wondering: which fine-tuning approach should I choose?
+
 | | Full Fine-tuning | PEFT (e.g., LoRA) |
 | --- | --- | --- |
 | Scope | All model parameters | Only added parameters (<1%) |
@@ -130,6 +154,8 @@ High-quality SFT datasets typically contain **10K to 100K** carefully annotated 
 | Use Case | Large companies, abundant compute | Most practical scenarios |
 
 ### 2.4 LoRA Deep Dive: The Magic of Low-Rank Decomposition
+
+Instead of renovating an entire building (full fine-tuning), why not just redecorate the room you live in (LoRA) — similar results, but 99% less work. That's the core philosophy of LoRA.
 
 **LoRA (Low-Rank Adaptation)** is the most popular PEFT method today. Its core idea is elegantly simple:
 
@@ -177,9 +203,15 @@ Where:
 | Data size | 1K~100K samples | Quality far more important than quantity |
 | Memory estimate | ~model_params_GB × 1.2 (QLoRA) | 70B model needs about 24-48GB |
 
+Don't panic if these parameters look overwhelming — if this is your first fine-tuning run, just use this "no-brainer config": **LoRA r=16, alpha=32, learning rate 2e-4, train for 3 epochs**. It works well enough for the vast majority of cases. Once you've got your first experiment running, come back and fine-tune the hyperparameters.
+
+> **One-line summary:** SFT = using carefully crafted instruction-response pairs to teach the generalist brain to "understand and follow orders." LoRA lets you do this on a single GPU.
+
 ## 3. RLHF: Making the Model Not Just Correct, But "Good to Use"
 
 SFT teaches the model to follow instructions, but it might produce answers that are **correct but not great** — too verbose, unfriendly tone, poor logical ordering. RLHF solves the "alignment" problem: making model outputs better match human preferences.
+
+If SFT teaches a student to write "correct answers," RLHF teaches them to write "answers that people enjoy reading" — both are right, but one is dry and the other has warmth.
 
 ### 3.1 Why Isn't SFT Enough?
 
@@ -210,6 +242,8 @@ Use PPO (Proximal Policy Optimization) to adjust the model toward generating hig
 
 PPO is complex to implement and unstable to train. **DPO (Direct Preference Optimization)**, proposed in 2023, offers a mathematically equivalent but engineering-simpler approach:
 
+You might be wondering: so should I pick PPO or DPO? This comparison will help you decide:
+
 | | PPO (Traditional RLHF) | DPO |
 | --- | --- | --- |
 | Needs reward model? | Yes, trained separately | No |
@@ -229,13 +263,17 @@ The before-and-after comparison is dramatic:
 - **Honesty**: Says "I'm not sure" when uncertain instead of fabricating
 - **Tone and style**: More friendly and professional
 
+> **One-line summary:** RLHF/DPO = using "which answer do humans prefer?" signals to fine-tune the model, upgrading it from "can answer correctly" to "answers beautifully." Small teams should default to DPO — simpler and good enough.
+
 ## 4. Deployment Optimization: Making Models Fast and Efficient
 
 Trained models are typically very large. Deployment requires a series of optimizations to serve within acceptable costs.
 
+Think of this step as "fitting a rocket engine from the lab into a production car" — performance can't drop too much, but costs must come down, and it needs to scale.
+
 ### 4.1 Quantization
 
-Compressing model weights from high precision to low precision:
+Compressing model weights from high precision to low precision — like compressing a raw photo into JPEG: several times smaller, nearly indistinguishable to the eye:
 
 | Precision | Per-Parameter Size | 70B Model Size | Inference Speed | Quality Loss |
 | --- | --- | --- | --- | --- |
@@ -248,6 +286,8 @@ Compressing model weights from high precision to low precision:
 
 ### 4.2 Inference Optimization Techniques
 
+Beyond quantization, there's a whole arsenal of "acceleration tricks" that are essential in production:
+
 | Technique | Problem Solved | Effect |
 | --- | --- | --- |
 | **KV Cache** | Avoids recomputing attention for already-generated tokens | Inference speed up by 10-100× |
@@ -258,6 +298,8 @@ Compressing model weights from high precision to low precision:
 
 ### 4.3 Practical Tool Chain
 
+Too many tools and not sure which to pick? Here's a breakdown by use case:
+
 | Tool | Purpose | Best For |
 | --- | --- | --- |
 | **Hugging Face Transformers** | All-purpose framework | Research, prototyping |
@@ -266,6 +308,8 @@ Compressing model weights from high precision to low precision:
 | **llama.cpp** | CPU/hybrid inference | Low-resource, edge devices |
 | **TGI** | HF Inference Service | Cloud API deployment |
 | **TRL** | RLHF/DPO training framework | SFT + alignment training |
+
+> **One-line summary:** Deployment optimization = quantization + inference acceleration + the right tools. 4-bit quantization + vLLM is currently the best production setup for the money.
 
 ## 5. Hands-on Practice Roadmap
 
@@ -307,6 +351,8 @@ pip install unsloth
 - Local experience: Ollama (one command to run)
 - API service: vLLM + FastAPI
 - Cloud: Hugging Face Inference Endpoints
+
+> **One-line summary:** Practice roadmap = pick a model → gather data → QLoRA fine-tune → quantize and deploy. The barrier is lower than you think — a single 4090 is enough to start.
 
 ## Chapter Summary
 

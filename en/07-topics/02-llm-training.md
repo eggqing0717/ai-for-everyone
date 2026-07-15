@@ -79,7 +79,11 @@ This means a 70B (70 billion parameter) model should optimally be trained on abo
 | Data (D) | How many tokens used for training | 1T → 15T |
 | Compute (C) | How much compute (FLOPs) | 10²³ → 10²⁵ |
 
-Their relationship is approximately: `C ≈ 6 × N × D` (each token requires ~6N FLOPs for forward + backward pass)
+These three are connected by an elegant formula — don’t worry, this might be the simplest math in the entire article:
+
+`C ≈ 6 × N × D`
+
+In plain English: **Compute bill ≈ 6 × Model size × How much data you fed it**. Why 6? Because each token passes through the model twice (once forward to get an answer, once backward to correct mistakes), and each pass involves about 3 matrix operations: 2×3=6. Think of a student who has to first write an answer and then check it against the answer key, flipping through 3 pages of reference material each time.
 
 ### 1.4 Training Infrastructure: GPU Clusters and Distributed Strategies
 
@@ -163,13 +167,24 @@ Instead of renovating an entire building (full fine-tuning), why not just redeco
 
 **How it works:**
 
-For an original weight matrix W (dimension d×d), LoRA doesn't modify W directly. Instead, it adds a "bypass" alongside it:
+Let’s look at what LoRA actually does mathematically — relax, this is simpler than you think.
+
+Imagine you have a 4096-page encyclopedia (that’s the original weight matrix W: 4096×4096 = 16 million "knowledge entries"). Now you want to "patch" it — say, to make it understand more about medicine.
+
+**The brute-force approach**: Rewrite an equally thick encyclopedia from scratch (full fine-tuning — another 16 million parameters to modify).
+
+**The clever approach (LoRA)**: Write a thin "sticky-note booklet" with only 16 pages (that’s the r=16), and clip it next to the encyclopedia. Every time you look something up, check the encyclopedia’s answer first, then add the sticky-note’s supplement — the two combined give you the final result.
+
+Expressed as a formula:
 
 ```
 output = W·x + (α/r) · B·A·x
+         ↑original answer    ↑sticky-note supplement
 ```
 
-Where:
+Here B·A is that "sticky-note booklet" — but why split it into two matrices multiplied together? This is the magic of "low-rank": instead of writing a full 4096×4096 patch book (still 16 million entries), you decompose it into two "lookup tables": A compresses the question into 16 keywords (4096→16), and B expands those 16 keywords into a full answer (16→4096). The two tables together only have 2×4096×16 = 131K parameters — just 0.8% of the original!
+
+Detailed parameter breakdown:
 - **A** is a d×r matrix (r is much smaller than d, typically r=8~64)
 - **B** is an r×d matrix
 - **W is frozen** (not trained), only A and B are trained
@@ -179,6 +194,8 @@ Where:
 ![LoRA Architecture Diagram](../assets/images/lora-architecture.svg)
 
 **Parameter comparison:** The original W has d² parameters (e.g., 4096² = 16M), while LoRA only needs to train 2×d×r parameters (e.g., 2×4096×16 = 131K) — **only 0.8% of the original**.
+
+To put it in perspective: modifying the encyclopedia used to require changing 16 million entries; now you only need to change 131 thousand — it’s like going from "rewriting an entire Oxford English Dictionary" to "writing a short blog post."
 
 ### 2.5 QLoRA: Fine-tuning Large Models on Consumer GPUs
 
@@ -231,12 +248,16 @@ Use preference data to train a "scorer" — input a (question, answer) pair, out
 
 **Step 3: Optimize with PPO**
 
-Treat the language model as an "RL Agent":
+PPO turns "writing a response" into a game:
+
+Imagine the model is a typist composing an answer. With every word it types (action), it glances at the reader’s face (reward). If the reader nods approvingly, keep going with that style; if the reader frowns, quickly change approach. The whole process is a loop of "type a word → check feedback → adjust strategy."
+
+Translated into reinforcement learning terminology, we treat the language model as an "RL Agent":
 - **State**: Current conversation context
 - **Action**: Generate next token
 - **Reward**: Score from the reward model
 
-Use PPO (Proximal Policy Optimization) to adjust the model toward generating higher-scoring responses. A KL divergence penalty prevents the model from drifting too far.
+Use PPO (Proximal Policy Optimization) to adjust the model toward generating higher-scoring responses. A KL divergence penalty prevents the model from drifting too far. (Think of KL divergence as a "rubber band" with one end tied to the original model: you can stretch away a bit to please the scorer, but pull too far and the rubber band snaps you back — preventing the model from saying bizarre things just to chase high scores.)
 
 ### 3.3 DPO: A Simpler Alternative
 

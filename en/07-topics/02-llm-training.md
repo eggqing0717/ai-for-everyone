@@ -191,6 +191,36 @@ Detailed parameter breakdown:
 - **r** is the "rank," controlling bypass capacity
 - **α** is the scaling factor (usually set to 1~2× of r)
 
+**Why doesn't freezing W lose the model's existing knowledge?**
+
+This is LoRA's most elegant design. The answer is hidden in that plus sign:
+
+```
+output = W·x + (α/r) · B·A·x
+```
+
+Look at the structure of this formula — it's **addition**, not replacement.
+
+Here's an analogy: you have an experienced doctor (original model W), and you want them to learn some Traditional Chinese Medicine (TCM). There are two approaches:
+
+- **Approach 1 (Full fine-tuning)**: "Retrain" the doctor from scratch — they do learn TCM, but they might forget some of their Western medicine knowledge. This is known as **Catastrophic Forgetting**.
+- **Approach 2 (LoRA)**: Give the doctor a TCM assistant (B·A). During every consultation, the doctor gives their judgment as usual (W·x), the TCM assistant adds supplementary input (B·A·x), and the final answer is the sum of both. **The doctor themselves hasn't changed at all** — not a single bit of their Western medicine knowledge is lost.
+
+Even more cleverly, LoRA has a "start-from-zero" design:
+
+> **At the beginning of training, B is initialized to all zeros.** This means B·A·x = 0, so the model's output is initially identical to the original — then B gradually learns useful things, and the output slowly "shifts."
+
+It's like the doctor's new assistant being completely silent on day one (no interference), then offering a bit more useful advice each day, gradually contributing.
+
+Finally, the "low-rank" constraint (small r) acts as an additional safeguard:
+
+> **The smaller r is, the less "opinion" the assistant can express** — it can only make adjustments within a very narrow "subspace." This prevents the assistant from modifying the output too aggressively, effectively adding a natural regularization to the change, further protecting the original knowledge.
+
+So LoRA's triple protection mechanism is:
+1. **Additive structure** → Original knowledge is fully preserved; new knowledge is layered on top
+2. **B initialized to zero** → Model output is unchanged at training start; changes are gradual
+3. **Low-rank constraint** → Limits the magnitude of change, preventing excessive deviation
+
 ![LoRA Architecture Diagram](../assets/images/lora-architecture.svg)
 
 **Parameter comparison:** The original W has d² parameters (e.g., 4096² = 16M), while LoRA only needs to train 2×d×r parameters (e.g., 2×4096×16 = 131K) — **only 0.8% of the original**.

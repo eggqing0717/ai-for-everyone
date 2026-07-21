@@ -13,8 +13,8 @@ Not to memorize a few terms, but to genuinely "get it" from the heart—to under
 ## Author and Contact
 
 - Author: The AI for Everyone project team
-- Email: [please fill in your email]
-- Project homepage: [please fill in the project homepage]
+- Email: eggqing@qq.com
+- Project homepage: https://ai-4-every.one
 
 Readers are welcome to share feedback, point out errors, or contribute content.
 

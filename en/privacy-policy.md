@@ -42,4 +42,4 @@ We may update this privacy policy from time to time. Any changes will be posted 
 
 ## Contact Us
 
-If you have any questions about this privacy policy, please contact us by email: [please fill in your email]
+If you have any questions about this privacy policy, please contact us by email: eggqing@qq.com

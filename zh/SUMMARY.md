@@ -44,8 +44,8 @@
 
 ## 专题篇：深入探索
 * [专题导读](07-topics/README.md)
-  * [专题1 AI Agent：让 AI 学会使用工具](07-topics/01-ai-agent.md)
-  * [专题2 大模型训练与微调：从预训练到 RLHF 全流程拆解](07-topics/02-llm-training.md)
+  * [专题1 AI Agent：让 AI 从“会回答”走向“会办事”](07-topics/01-ai-agent.md)
+  * [专题2 大模型训练与微调：模型是怎么从“会续写”变成“会帮忙”的](07-topics/02-llm-training.md)
 
 ## 附录
 * [本部分导读](06-appendix/README.md)

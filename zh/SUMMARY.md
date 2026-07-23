@@ -46,6 +46,7 @@
 * [专题导读](07-topics/README.md)
   * [专题1 AI Agent：让 AI 从“会回答”走向“会办事”](07-topics/01-ai-agent.md)
   * [专题2 大模型训练与微调：模型是怎么从“会续写”变成“会帮忙”的](07-topics/02-llm-training.md)
+  * [专题3 Agent 常用架构与框架：AI 团队是怎样组织起来的](07-topics/03-agent-architectures-frameworks.md)
 
 ## 附录
 * [本部分导读](06-appendix/README.md)
